@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Muller';
+  font-family: "Muller Light";
   src: url(../fonts/MullerLight.woff2) format('woff2'), 
     url('../fonts/MullerLight.woff') format('woff');
   font-display: swap;
@@ -8,16 +8,17 @@
 }
 
 @font-face {
-  font-family: 'Muller';
+  font-family: "Muller Regular";
   src: url('../fonts/MullerRegular.woff2') format('woff2'),
     url('../fonts/MullerRegular.woff') format('woff');
   font-display: swap;
   font-weight: 400;
+  font-size: 16px;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Muller';
+  font-family: "Muller Medium";
   src: url('../fonts/MullerMedium.woff2') format('woff2'),
     url('../fonts/MullerMedium.woff') format('woff');
     font-display: swap;
@@ -26,11 +27,12 @@
 }
 
 @font-face {
-  font-family: 'Muller';
+  font-family: "Muller Bold";
   src: url('../fonts/MullerBold.woff2') format('woff2'),
     url('../fonts/MullerBold.woff') format('woff');
     font-display: swap;
     font-weight: 700;
+    font-size: 16px;
     font-style: normal;
 }
 
@@ -47,7 +49,7 @@
 
 body {
   min-width: 1170px;
-	font-family: 'Muller', sans-serif;
+	font-family: 'Muller Regular', sans-serif;
   background-color: #F1F1F1;
 }
 
@@ -91,6 +93,7 @@ img {
 }
 
 .header {
+  padding-top: 30px;
   margin-bottom: 70px;
 }
 
@@ -113,41 +116,36 @@ img {
 .contacts-item-link {
   margin-right: auto;
   align-items: center;
-  color: #666;
-  font-weight: 500;
+  font-family: "Muller Medium";
   font-size: 20px;
+  color: #666;
 }
 
 .account {
   margin-right: 11px;
   padding-left: 28px;
-  font-size: 16px;
-  font-weight: 400;
-  background-image: url(../../06_layout-html/img/keyboard_tab.png);
+  background-image: url("../img/keyboard_tab.png");
+  background-repeat: no-repeat;
   background-position: left center;
   background-size: 25px 25px;
-  background-repeat: no-repeat;
   color: #cc9933;
 }
 
 .header-div-nav {
-  padding: 12px 21px;
+  padding: 14px 45px;
   align-items: center;
-  width: 100%;
-  background-color: #fff;
   border-radius: 12px;
+  background-color: #fff;
+  color: #666;
 }
 
 .header-nav {
+  margin-right: auto;
   justify-content: space-between;
 }
 
 .header-list-item:not(:last-child) {
   margin-right: 45px;
-}
-
-.header-list-item:last-child {
-  margin-right: 114px;
 }
 
 .header-btn {
@@ -163,24 +161,19 @@ img {
   padding: 13px 20px 13px 20px;
   border-radius: 10px;
   border: 1px solid #CC9933;
-  color: #CC9933;
   background-color: #fff;
+  color: #CC9933;
 }
 
 /* main-section */
 .main-section {
-  margin: 0 auto;
   margin-bottom: 70px;
-  width: 1170px;
 }
 
 .title-2 {
   margin-bottom: 20px;
   padding-left: 43px;
   font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
-  letter-spacing: 0em;
   text-align: left;
   color: #333;
 }
@@ -201,7 +194,7 @@ img {
   margin-bottom: 24px;
   padding: 40px 108px 40px 45px;
   background-image:  linear-gradient(to right, rgba(48, 64, 89, 0.84) 0%, 
-    rgba(53, 65, 83, 0) 88.67%), url(../../06_layout-html/img/specially1.png);
+    rgba(53, 65, 83, 0) 88.67%), url("../img/specially1.png");
   border-radius: 15px;
   width: 573px;
   height: 258px;
@@ -212,7 +205,7 @@ img {
   padding: 40px 108px 40px 45px;
   background-image: linear-gradient(to right, rgba(48, 64, 89, 0.84), 
     rgba(53, 65, 83, 0)), 
-    url(../../06_layout-html/img/specially2.png);
+    url("../img/specially2.png");
   border-radius: 15px;
   width: 573px;
   height: 258px;
@@ -221,7 +214,7 @@ img {
 .specially-3 {
   flex-direction: column;
   padding: 212px 229px 148px 45px;
-  background-image: url(../../06_layout-html/img/specially3.png);
+  background-image: url("../img/specially3.png");
   border-radius: 15px;
   width: 573px;
   height: 540px;
@@ -229,10 +222,8 @@ img {
 
 .title-3 {
   margin-bottom: 15px;
+  font-family: "Muller Bold";
   font-size: 40px;
-  font-weight: 700;
-  line-height: 40px;
-  letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
 }
@@ -240,9 +231,6 @@ img {
 .price {
   margin-bottom: 47px;
   font-size: 20px;
-  font-weight: 400;
-  line-height: 20px;
-  letter-spacing: 0em;
   text-align: left;
   color: #FFFFFF;
   vertical-align: top;
@@ -251,33 +239,29 @@ img {
 }
 
 .more {
+  display: inline-block;
   padding-right: 15px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 16px; 
-  letter-spacing: 0em;
+  align-self: flex-start;
   text-align: left;
-  color: #F0BF5F;
-  vertical-align: top;
-  fill: solid;
-
-  background-image: url(../../06_layout-html/img/Rectangle2.png);
-  background-position: 23%;
+  background-image: url("../img/Rectangle2.svg");
   background-repeat: no-repeat;
+  background-position: right center;
+  color: #F0BF5F;
+  
 }
 
 .section-descr {
-  font-size: 16px;
   line-height: 32px;
-  line-height: 200%;
   text-align: left;
   vertical-align: top;
 }
 
 /* секция about_us */
+.about_us {
+  margin-bottom: 70px;
+}
 .about_us-descr {
   width: 888px;
-  height: 252px;
 }
 
 /* секция services */
@@ -286,17 +270,16 @@ img {
 }
 
 .services-title {
+  display: inline-block;
+  align-self: flex-start;
   margin: 0;
   padding-right: 15px;
-  font-weight: 400;
-
-  letter-spacing: 0em;
-  font-size: 20px;
-  line-height: 40px;
-  color: #CC9933;
-
-  background-image: url(../../06_layout-html/img/Rectangle2.png);
+  background-image: url("../img/Rectangle2.svg");
   background-repeat: no-repeat;
+  background-position: right center;
+  font-family: "Muller Medium";
+  font-size: 20px;
+  color: #CC9933;
 }
 
 .list-services {
@@ -323,20 +306,24 @@ img {
   margin-right: 24px; 
 }
 
+.list-item-services:nth-last-child(-n+2) {
+  margin-bottom: 0; 
+}
+
 .img-1 {
-  background-image: url('../../06_layout-html/img/img-1.jpg');
+  background-image: url('../img/img-1.jpg');
 }
 
 .img-2 {
-  background-image: url('../../06_layout-html/img/img-2.jpg');
+  background-image: url('../img/img-2.jpg');
 }
 
 .img-3 {
-  background-image: url('../../06_layout-html/img/img-3.jpg');  
+  background-image: url('../img/img-3.jpg');  
 }
 
 .img-4 {
-  background-image: url('../../06_layout-html/img/img-4.jpg');
+  background-image: url('../img/img-4.jpg');
 }
 
 .list-accommodation {
@@ -378,36 +365,40 @@ img {
   margin-right: 22px; 
 }
 
+.list-item-benefits:nth-last-child(-n+4) {
+  margin-bottom: 0; 
+}
+
 .picture-1 {
-  background-image: url('../../06_layout-html/img/bathtub.jpg');
+  background-image: url('../img/bathtub.jpg');
 }
 
 .picture-2 {
-  background-image: url('../../06_layout-html/img/hanger.jpg');
+  background-image: url('../img/hanger.jpg');
 }
 
 .picture-3 {
-  background-image: url('../../06_layout-html/img/heating.jpg');
+  background-image: url('../img/heating.jpg');
 }
 
 .picture-4 {
-  background-image: url('../../06_layout-html/img/hotel-key.jpg');
+  background-image: url('../img/hotel-key.jpg');
 }
 
 .picture-5 {
-  background-image: url('../../06_layout-html/img/parking.jpg');
+  background-image: url('../img/parking.jpg');
 }
 
 .picture-6 {
-  background-image: url('../../06_layout-html/img/reception.jpg');
+  background-image: url('../img/reception.jpg');
 }
 
 .picture-7 {
-  background-image: url('../../06_layout-html/img/security-box.jpg');
+  background-image: url('../img/security-box.jpg');
 }
 
 .picture-8 {
-  background-image: url('../../06_layout-html/img/swimming-pool.jpg');
+  background-image: url('../img/swimming-pool.jpg');
 }
 
 /* секция .accommodation */
@@ -427,11 +418,16 @@ img {
   border-radius: 15px;
   text-align: center left;
   background-repeat: no-repeat;
+  overflow: hidden;
 
 }
 
 .list-item-accommodation:not(:nth-child(3n)) {
   margin-right: 24px; 
+}
+
+.list-item-accommodation:nth-last-child(-n+3) {
+  margin-bottom: 0;
 }
 
 .article {
@@ -440,7 +436,6 @@ img {
 
 .article-img {
   margin-bottom: 32px;
-  border-radius: 15px;
 }
 
 .accommodation-article{
@@ -450,35 +445,31 @@ img {
 
 .accommodation-from {
   margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 16px;
   color: #999;
 }
 
 .accommodation-price{
-  font-weight: 700;
-  font-size: 16px;
-  font-style: bold;
+  font-family: "Muller Bold";
   color: #000;
 }
 
 .accommodation-night {
-  font-weight: 400;
-  font-size: 16px;
   color: #000;
+}
+
+.rating {
+margin-bottom: 16px;
 }
 
 .accommodation-title {
   margin-bottom: 16px;
-  font-weight: 400;
+  font-family: "Muller Regular";
   font-size: 16px;
   color: #000;
 }
 
 .accommodation-adress {
   margin-bottom: 20px;
-  font-weight: 400;
-  font-size: 16px;
   color: rgba(153, 153, 153, 1);
 }
 
@@ -494,15 +485,22 @@ img {
 
 .more-hotels {
   padding-top: 373px;
-  font-weight: 500;
-  font-size: 20px;
   width: 100%;
-  height: 100%;
-  background-image: url("../../06_layout-html/img/siting9.jpg");
+  background-image: url("../img/siting9.jpg");
   background-position: center;
-
   object-fit: cover;
-  color: #FFF;
   text-align: center;
   border-radius: 15px;
+  font-family: "Muller Medium";
+  font-size: 20px;
+  color: #FFF;
+}
+
+.arrow {
+  display: inline-block;
+  align-self: flex-start;
+  padding-right: 15px;
+  background-image: url("../img/Rectangle-w.svg");
+  background-repeat: no-repeat;
+  background-position: right;
 }
