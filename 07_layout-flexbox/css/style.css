@@ -97,12 +97,6 @@ img {
   margin-bottom: 70px;
 }
 
-.header-container {
-  padding-top: 30px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
 .header-link {
   margin-bottom: 30px;
   align-items: center;
@@ -122,7 +116,6 @@ img {
 }
 
 .account {
-  margin-right: 11px;
   padding-left: 28px;
   background-image: url("../img/keyboard_tab.png");
   background-repeat: no-repeat;
@@ -413,6 +406,7 @@ img {
 
 .list-item-accommodation:not(:nth-child(3n)) {
   margin-right: 24px; 
+  position: relative;
 }
 
 .list-item-accommodation:nth-last-child(-n+3) {
