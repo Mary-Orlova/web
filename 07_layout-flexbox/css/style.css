@@ -326,18 +326,6 @@ img {
   background-image: url('../img/img-4.jpg');
 }
 
-.list-accommodation {
-  flex-wrap: wrap;
-}
-
-.list-item-accommodation {
-  margin-bottom: 24px;
-  width: 374px;
-  height: 440px;
-  background-color: #FFF;
-
-}
-
 /* секция .benefits */
 .benefits {
   margin-bottom: 70px;
@@ -412,6 +400,7 @@ img {
 } 
 
 .list-item-accommodation {
+  margin-bottom: 24px;
   width: 374px;
   height: 440px;
   background-color: #FFF;
