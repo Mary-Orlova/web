@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Muller Light";
+  font-family: "Muller";
   src: local('Muller Light'), url(../fonts/MullerLight.woff2) format('woff2'), 
     url('../fonts/MullerLight.woff') format('woff');
   font-display: swap;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-  font-family: "Muller Regular";
+  font-family: "Muller";
   src: local('Muller Regular'), url('../fonts/MullerRegular.woff2') format('woff2'),
     url('../fonts/MullerRegular.woff') format('woff');
   font-display: swap;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-  font-family: "Muller Medium";
+  font-family: "Muller";
   src: local('Muller Medium'), url('../fonts/MullerMedium.woff2') format('woff2'),
     url('../fonts/MullerMedium.woff') format('woff');
     font-display: swap;
@@ -31,27 +31,15 @@
     url('../fonts/MullerBold.woff') format('woff');
     font-display: swap;
     font-weight: 700;
-    font-size: 16px;
     font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
 }
 
-/* для скрытых элементов */
-.hidden {
-  display: none;
-}
-
-body {
-  min-width: 1170px;
-	font-family: 'Muller Regular', sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  background-color: #F1F1F1;
+*, ::after, ::before {
+  box-sizing: inherit; 
 }
 
 a {
@@ -65,6 +53,20 @@ ul {
 
 img {
 	max-width: 100%;
+}
+
+/* для скрытых элементов */
+.hidden {
+  display: none;
+}
+
+body {
+  min-width: 320px;
+	font-family: 'Muller Regular', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: #F1F1F1;
 }
 
 /* сброс для ul */
@@ -88,7 +90,7 @@ img {
 }
 
 .container {
-  max-width: 1170px;
+  min-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -111,7 +113,7 @@ img {
 .contacts-item-link {
   margin-right: auto;
   align-items: center;
-  font-family: "Muller Medium";
+  font-weight: 500;
   font-size: 20px;
   line-height: 20px;
   color: #666;
@@ -129,7 +131,7 @@ img {
 .header-div-nav {
   padding: 14px 45px;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 15px;
   background-color: #fff;
   color: #666;
 }
@@ -137,6 +139,11 @@ img {
 .header-nav {
   margin-right: auto;
   justify-content: space-between;
+}
+
+.header-list {
+  margin: 0;
+  padding: 0;
 }
 
 .header-list-item:not(:last-child) {
@@ -166,11 +173,12 @@ img {
 }
 
 .title-2 {
+  margin: 0;
   margin-bottom: 20px;
   padding-left: 43px;
   font-size: 40px;
   line-height: 40px;
-  text-align: left;
+  font-weight: 400;
   color: #333;
 }
 
@@ -185,40 +193,46 @@ img {
 }
 
 /* разделы спецпредложений */
-.specially-1 {
-  flex-direction: column;
+.specially {
   margin-bottom: 24px;
   padding: 40px 108px 40px 45px;
-  background-image:  linear-gradient(to right, rgba(48, 64, 89, 0.84) 0%, 
-    rgba(53, 65, 83, 0) 88.67%), url("../img/specially1.png");
+  background-repeat: no-repeat;
+  block-size: cover;
   border-radius: 15px;
   width: 573px;
-  height: 258px;
 }
 
-.specially-2 {
-  flex-direction: column;
-  padding: 40px 108px 40px 45px;
+.foto-1{
+  background-image:  linear-gradient(to right, rgba(48, 64, 89, 0.84) 0%, 
+    rgba(53, 65, 83, 0) 88.67%), url("../img/specially1.png");
+}
+
+.foto-2  {
   background-image: linear-gradient(to right, rgba(48, 64, 89, 0.84), 
     rgba(53, 65, 83, 0)), 
     url("../img/specially2.png");
+}
+  
+.specially-3 {
+  padding: 212px 229px 40px 45px;
+  background-image: url("../img/specially3.png");
+  background-repeat: no-repeat;
+  block-size: cover;
   border-radius: 15px;
   width: 573px;
-  height: 258px;
 }
 
-.specially-3 {
-  flex-direction: column;
-  padding: 212px 229px 148px 45px;
-  background-image: url("../img/specially3.png");
-  border-radius: 15px;
-  width: 573px;
-  height: 540px;
+.title-specially {
+  margin: 0;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: #FFFFFF;
 }
 
 .title-3 {
+  margin: 0;
   margin-bottom: 15px;
-  font-family: "Muller Bold";
   font-size: 40px;
   line-height: 40px;
   text-align: left;
@@ -226,21 +240,19 @@ img {
 }
 
 .price {
+  display: block;
   margin-bottom: 47px;
   font-size: 20px;
   line-height: 20px;
   text-align: left;
   color: #FFFFFF;
   vertical-align: top;
-  opacity: 80%;
+  opacity: 0.8;
   fill: solid;
 }
 
 .more {
-  display: inline-block;
   padding-right: 15px;
-  align-self: flex-start;
-  text-align: left;
   background-image: url("../img/Rectangle2.svg");
   background-repeat: no-repeat;
   background-position: right center;
@@ -249,9 +261,11 @@ img {
 }
 
 .section-descr {
-  line-height: 32px;
-  text-align: left;
-  vertical-align: top;
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000;
 }
 
 /* секция about_us */
@@ -259,6 +273,7 @@ img {
   margin-bottom: 70px;
 }
 .about_us-descr {
+  margin: 0;
   width: 888px;
 }
 
@@ -268,14 +283,14 @@ img {
 }
 
 .services-title {
-  display: inline-block;
-  align-self: flex-start;
   margin: 0;
+}
+
+.services-link {
   padding-right: 15px;
   background-image: url("../img/Rectangle2.svg");
   background-repeat: no-repeat;
   background-position: right center;
-  font-family: "Muller Medium";
   font-size: 20px;
   line-height: 200%;
   color: #CC9933;
@@ -291,14 +306,12 @@ img {
   flex-direction: column;
   justify-content: end;
   margin-bottom: 24px;
-  padding: 26px 136px 35px 45px;
+  padding: 191px 126px 35px 45px;
   width: 573px;
-  height: 330px;
 
   background-repeat: no-repeat;
   border-radius: 15px;
   background-color: #FFF;
-  text-align: center left;
 }
 
 .list-item-services:not(:nth-child(2n)) {
@@ -339,7 +352,6 @@ img {
   margin-bottom: 22px;
   padding: 116px 42px 32px 45px;
   width: 276px;
-  height: 276px;
   background-color: #FFF;
   background-position: 45px 40px;
 
@@ -396,23 +408,20 @@ img {
 .list-accommodation {
   flex-wrap: wrap;
   width: 1170px; 
+  margin-bottom: 70px;
 } 
 
 .list-item-accommodation {
   margin-bottom: 24px;
   width: 374px;
-  height: 440px;
   background-color: #FFF;
   border-radius: 15px;
-  text-align: center left;
   background-repeat: no-repeat;
   overflow: hidden;
-
 }
 
 .list-item-accommodation:not(:nth-child(3n)) {
   margin-right: 24px; 
-  position: relative;
 }
 
 .list-item-accommodation:nth-last-child(-n+3) {
@@ -423,24 +432,23 @@ img {
   object-fit: cover;
 }
 
-.article-img {
-  margin-bottom: 32px;
-}
-
 .accommodation-article{
   margin-bottom: 22px;
-  padding-left: 45px;
+  padding: 32px 45px 45px;
+}
+
+.accommodation-price-raiting {
+  margin-bottom: 16px;
 }
 
 .accommodation-from {
-  margin-bottom: 16px;
   color: #999;
 }
 
 .accommodation-price{
-  font-family: "Muller Bold";
   font-size: 20px;
   line-height: 20px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -448,26 +456,24 @@ img {
   color: #000;
 }
 
-.rating {
-margin-bottom: 16px;
-}
-
 .accommodation-title {
+  margin: 0;
   margin-bottom: 16px;
-  font-family: "Muller Regular";
   font-size: 16px;
+  line-height: 16px;
   color: #000;
 }
 
 .accommodation-adress {
   margin-bottom: 20px;
-  color: rgba(153, 153, 153, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
 }
 
 .rooms {
-  margin-bottom: 45px;
-  text-align: center;
-  padding: 13px 20px 13px 20px;
+  padding: 13px 20px;
   border-radius: 10px;
   border: 1px solid #CC9933;
   color: #CC9933;
@@ -475,23 +481,26 @@ margin-bottom: 16px;
 }
 
 .more-hotels {
-  padding-top: 373px;
-  width: 100%;
-  background-image: url("../img/siting9.jpg");
-  background-position: center;
-  object-fit: cover;
-  text-align: center;
-  border-radius: 15px;
-  font-family: "Muller Medium";
-  font-size: 20px;
-  color: #FFF;
-}
-
-.arrow {
-  display: inline-block;
-  align-self: flex-start;
   padding-right: 15px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  text-align: center;
+  color: #FFFFFF;
   background-image: url("../img/Rectangle-w.svg");
   background-repeat: no-repeat;
+  block-size: cover;
   background-position: right;
+}
+
+.list-item-accommodation-foto {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 27px;
+  background-image: url("../img/siting9.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
 }
