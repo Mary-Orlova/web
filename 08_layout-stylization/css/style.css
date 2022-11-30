@@ -90,7 +90,7 @@ body {
 }
 
 .container {
-  min-width: 1170px;
+  max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -482,6 +482,7 @@ body {
 
 .more-hotels {
   padding-right: 15px;
+
   font-weight: 500;
   font-size: 20px;
   line-height: 200%;
