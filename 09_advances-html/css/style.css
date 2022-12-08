@@ -532,6 +532,7 @@ body {
 .tour-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   padding: 32px 28px;
   align-items: center;
   border-radius: 15px;
@@ -542,9 +543,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 141px;
-  margin-right: 20px;
-  padding-right: 20px;
 }
 
 .tour-lable-big {
@@ -565,12 +563,6 @@ body {
 
 .tour-input-border {
   border-bottom: 1px solid #E9E9E9;
-}
-
-.btn-tour {
-  display: flex;
-  flex-grow: 1;
-  width: 108px;
 }
 
 /* contacts */
@@ -612,6 +604,10 @@ body {
   border-bottom: 1px solid #E9E9E9;
 }
 
+.contact-adress {
+  font-style: normal;
+}
+
 .contacts-info:last-child {
   margin-bottom: 0;
 }
@@ -626,12 +622,19 @@ body {
   color: #000000;
 }
 
+.contact-descr {
+  width: 229px;
+}
+
+
 .contacts-right {
   width: 100%;
   max-width: 230px;
 }
 
 .contact-text {
+  margin: 0;
+  width: 229px;
   font-style: normal;
   color: #000000;
 }
@@ -662,20 +665,6 @@ body {
   padding-bottom: 30px;
 }
 
-.footer-descr {
-  font-style: normal;
-  line-height: 190%;
-  color: #FFFFFF;
-}
-
-.footer-descr:not(:last-child) {
-  margin-bottom: 40px;
-}
-
-.footer-address {
-  margin-bottom: 15px;
-}
-
 .footer-black {
   padding: 45px;
   border-radius: 15px;
@@ -686,25 +675,43 @@ body {
   background-position: right 177px bottom;
 }
 
-.links-wrap {
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 150%;
-  color: #CC9933;
-}
-
-.links-wrap:not(:last-child) {
-  margin-bottom: 15px;
-}
-
 .footer-left {
   max-width: 302px;
   margin-right: 125px;
 }
 
+.footer-descr {
+  margin-bottom: 37px;
+  font-style: normal;
+  line-height: 190%;
+  color: #FFFFFF;
+}
+
+.footer-descr:nth-child(2n) {
+  margin-bottom: 40px;
+}
+
 .footer-center {
   max-width: 359px;
-  margin-right: 40px;
+  font-style: normal;
+}
+
+.footer-address {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+
+.links-wrap {
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 150%;
+}
+
+.link-footer:nth-child(2n) {
+  margin-bottom: 15px;
 }
 
 .footer-social {
