@@ -6,17 +6,17 @@
 .socials__item {
     display: inline-block;
     margin-right: 25px;
-   
 }
 
 .socials__link {
     display: flex; 
     align-items: flex-start;
+    justify-content: center;
     width: 60px;
     height: 60px;
     fill: var(--dark-gray);
     transform: fill var(--short);
-    outline: none;
+    outline: none; 
 }
 
 .socials__link:hover {

@@ -13,6 +13,10 @@
     align-items: center;
 }
 
+.header__menu {
+    margin-right: 260px;
+}
+
 .header__logo,
 .header__search-btn {
     flex-shrink: 0;
@@ -84,20 +88,24 @@
 .header__search-btn {
     width: 24px;
     height: 24px;
-    color: var(--dark);
+    fill: var(--dark);
+    stroke: var(--dark);
     outline: none;
     transition: color var(--short);
 }
 
 .header__search-btn:hover {
-    color: orange;
+    fill: var(--orange);
+    stroke: var(--orange);
 }
 
 .header__search-btn:focus:not(:hover) {
     outline: 2px solid var(--orange);
+    stroke: var(--orange);
     outline-offset: 5px;
 }
 
 .header__search-btn:active {
-    color: var(--dark-orange);
+    fill: var(--dark-orange);
+    stroke: var(--dark-orange);
 }
