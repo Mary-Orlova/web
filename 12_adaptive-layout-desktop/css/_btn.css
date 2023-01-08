@@ -20,7 +20,6 @@
 }
 
 .btn--big {
-    min-width: 400px;
     padding: 24px 35px;
     font-size: 24px;
     line-height: 29px;
@@ -38,12 +37,10 @@
 .about__btn:hover,
 .about__btn:focus {
     background-color: var(--orange);
-    border: none;
 }
 
 .about__btn:active {
     background-color: var(--dark-orange);
-    border: none;
 }
 
 .btn--consultation {

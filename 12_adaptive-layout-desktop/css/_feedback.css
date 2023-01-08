@@ -46,10 +46,7 @@
 }
 
 .feedback__submit-btn {
-    margin-right: 23px;
-    flex-shrink: 0;
-    max-width: 269px;
-    width: 100%;
+    padding: 19px 52px;
     align-items: center;
     justify-content: center;
     font-weight: var(--bold);

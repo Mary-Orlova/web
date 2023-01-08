@@ -23,8 +23,8 @@
 
 
     /* Размеры*/
-    --container-max-width: 1870px;
-    --container-padding: 50px;
+    --container-max-width: 1920px;
+    --container-padding: 75px;
 
     /* Анимация */
     --short: .3s;
