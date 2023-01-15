@@ -11,7 +11,6 @@
   text-align: center;
 }
 
-.btn:hover,
 .btn:focus {
   background-color: var(--transp-orange);
 }
@@ -36,7 +35,6 @@
   transition:  color var(--short) ;
 }
 
-.about__btn:hover,
 .about__btn:focus {
   background-color: var(--orange);
 }
@@ -52,7 +50,6 @@
   background-color: transparent;
 }
 
-.btn--consultation:hover,
 .btn--consultation:focus {
   color: var(--white);
   background-color: var(--dark-gray);
@@ -60,4 +57,19 @@
 
 .btn--consultation:active {
   background-color: var(--black);
+}
+
+@media (any-hover: hover) {
+  .btn:hover:not(:active) {
+    background-color: var(--transp-orange);
+  }
+
+  .about__btn:hover:not(:active) {
+   background-color: var(--orange);
+  }
+
+  .btn--consultation:hover:not(:active) {
+    color: var(--white);
+    background-color: var(--dark-gray);
+  }
 }

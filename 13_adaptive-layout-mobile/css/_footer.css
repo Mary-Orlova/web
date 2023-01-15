@@ -36,10 +36,6 @@
   transform: color var(--short);
 }
 
-.footer__menu-link:hover {
-  color: var(--orange);
-}
-
 .footer__menu-link:focus:not(:active) {
   outline: 2px solid var(--orange);
   outline-offset: 3px;
@@ -61,4 +57,10 @@
 .footer__text {
   line-height: 32px;
   color: var(--light-gray);
+}
+
+@media (any-hover: hover) {
+  .footer__menu-link:hover:not(:active) {
+    color: var(--orange);
+  }
 }

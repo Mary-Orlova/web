@@ -69,11 +69,7 @@
   transform: scaleX(0);
 }
 
-.header__menu-link:hover::after {
-  transform: scaleX(1);
-}
-
-.header__menu-link:focus:not(:hover) {
+.header__menu-link:focus:not(:hover:not(:active)) {
   outline: 2px solid var(--orange);
   outline-offset: 5px;
 }
@@ -98,12 +94,7 @@
   stroke: var(--dark);
 }
 
-.header__search-btn:hover {
-  fill: var(--orange);
-  stroke: var(--orange);
-}
-
-.header__search-btn:focus:not(:hover) {
+.header__search-btn:focus:not(:hover:not(:active)) {
   outline: 2px solid var(--orange);
   outline-offset: 5px;
 
@@ -113,4 +104,15 @@
 .header__search-btn:active {
   fill: var(--dark-orange);
   stroke: var(--dark-orange);
+}
+
+@media (any-hover: hover) {
+  .header__menu-link:hover:not(:active)::after {
+    transform: scaleX(1);
+  }
+
+  .header__search-btn:hover:not(:active) {
+    fill: var(--orange);
+    stroke: var(--orange);
+  }
 }

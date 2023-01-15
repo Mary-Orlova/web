@@ -20,10 +20,6 @@
   fill: var(--dark-gray);
 }
 
-.socials__link:hover {
-  fill: var(--orange);
-}
-
 .socials__link:focus:not(:active) {
   outline: 2px solid var(--orange);
   outline-offset: 3px;
@@ -31,4 +27,10 @@
 
 .socials__link:active {
   fill: var(--dark-orange);
+}
+
+@media (any-hover: hover) {
+  .socials__link:hover:not(:active) {
+    fill: var(--orange);
+  }
 }
