@@ -5,10 +5,10 @@
   font-weight: var(--bold);
   line-height: 20px;
   color: var(--white);
-  text-align: center;
   outline: none;
   background-color: var(--orange);
   transition: background-color var(--short);
+  text-align: center;
 }
 
 .btn:hover,
@@ -28,12 +28,12 @@
 
 .about__btn {
   margin-left: auto;
-  padding: 16px 36px;
+  padding: 11px 36px;
   border: 3px solid var(--orange);
   border-radius: 16px;
   color: var(--white);
   background-color: transparent;
-  transition: color var(--short) ;
+  transition:  color var(--short) ;
 }
 
 .about__btn:hover,
