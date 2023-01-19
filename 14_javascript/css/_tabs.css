@@ -10,8 +10,12 @@
   margin-right: 85px;
 }
 
-.tabs_btn {
+.tabs__btn {
   transition: color var(--short);
+}
+
+.tabs__btn.active {
+  color: var(--orange);
 }
 
 .tabs__btn:focus:not(:hover:not(:active)):not(:active) {
