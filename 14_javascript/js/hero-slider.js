@@ -1,4 +1,5 @@
-const swiper = new Swiper('.js-hero--slider', {
+(() => {
+  const swiper = new Swiper('.js-hero--slider', {
     slidesPerView: 1,
     loop: true,
     pagination: {
@@ -6,7 +7,9 @@ const swiper = new Swiper('.js-hero--slider', {
       clickable: true,
     },
   
-  a11y: {
-    paginationBulletMessage: 'Перейти к слайду {{index}}'
-  }
-});
+    a11y: {
+      paginationBulletMessage: 'Перейти к слайду {{index}}'
+    }
+  });
+})();
+

@@ -23,9 +23,17 @@
   color: var(--dark-orange);
 }
 
+
 .tabs__content-wrap {
-  display: flex;
+  display: none;
   justify-content: space-between;
+  align-items: flex-start;
+}
+
+.tabs__content-wrap.active {
+  display: flex;
+  animation-name: fade-in;
+  animation-duration: 0.7s;
 }
 
 .tabs__content {
@@ -66,6 +74,5 @@
 @media (any-hover: hover) {
   .tabs__btn:hover:not(:active) {
     color: var(--orange);
-    outline: none;
   }
 }

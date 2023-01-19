@@ -16,6 +16,7 @@
   >
   <script defer src="js/swiper-min.js"></script>
   <script defer src="js/hero-slider.js"></script>
+  <script defer src="js/tabs.js"></script>
 </head>
 <body>
     <h1 class="visually-hidden">Евклид проектные системы</h1>
@@ -118,15 +119,15 @@
         <section class="step" id="step">
             <div class="container">
                 <h2 class="section-title step__title">Как мы&nbsp;работаем</h2>
-                    <div class="step__tabs tabs">
+                    <div class="step__tabs tabs js-tabs-wrap">
                         <ul class="list-reset tabs__btn-list ">
-                            <li class="tabs__btn-item"><button class="tabs__btn active btn-reset">1&nbsp;шаг</button> </li>   
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">2&nbsp;шаг</button> </li>
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">3&nbsp;шаг</button> </li>
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">4&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn active btn-reset js-tab-btn" data-path="one">1&nbsp;шаг</button> </li>   
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="two">2&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="three">3&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="four">4&nbsp;шаг</button> </li>
                         </ul>
 
-                        <div class="tabs__content-wrap tabs__content-wrap--consultation">
+                        <div class="tabs__content-wrap active js-tab-content" data-target="one">
                             <div class="tabs__content">
                                 <h3 class="tabs__title">Проводим консультацию</h3>
                                 <p class="section-descr tabs__descr">
@@ -151,6 +152,68 @@
                                 </picture>
                             </div>
                         </div>
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="two">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Составляем смету</h3>
+                                <p class="section-descr tabs__descr">
+                                    Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_two@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_two@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_two.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="three">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Привлекаем подрядчиков</h3>
+                                <p class="section-descr tabs__descr">
+                                    Идейные соображения высшего порядка, а&nbsp;также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса профессионального сообщества.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_three@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_three@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_three.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="four">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Инспектируем все этапы работ</h3>
+                                <p class="section-descr tabs__descr">
+                                    Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_four@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_four@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_four.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
                     </div>
             </div>
         </section> 
