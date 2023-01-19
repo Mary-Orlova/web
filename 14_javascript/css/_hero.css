@@ -21,10 +21,30 @@
   bottom: 0;
   left: 0;
   border-radius: 32px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero__slide {
   background-color: var(--gray);
-  background-image: url("../img/hero-1.png");
   background-position: center;
   background-size: cover;
+}
+
+.hero__slide--one {
+  background-image: url("../img/hero_slider_one.jpeg");
+}
+
+.hero__slide--two {
+  background-image: url("../img/hero_slider_two.jpeg");
+}
+
+.hero__slide--three {
+  background-image: url("../img/hero_slider_three.jpeg");
+}
+
+.hero__slider-pagination.swiper-pagination {
+  bottom: 20px;
 }
 
 .hero__title {

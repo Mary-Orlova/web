@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link
@@ -13,6 +14,8 @@
     href="favicon.ico"
     type="image/x-icon"
   >
+  <script defer src="js/swiper-min.js"></script>
+  <script defer src="js/hero-slider.js"></script>
 </head>
 <body>
     <h1 class="visually-hidden">Евклид проектные системы</h1>
@@ -56,7 +59,15 @@
                         <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов</p>
                         <button class="btn-reset btn btn--big">Заказать расчёт</button>
                     </div>
-                    <div class="hero__slider"></div>
+                    <div class="hero__slider js-hero--slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide hero__slide hero__slide--one"></div>
+                            <div class="swiper-slide hero__slide hero__slide--two"></div>
+                            <div class="swiper-slide hero__slide hero__slide--three"></div>
+                          </div>
+                
+                          <div class="hero__slider-pagination swiper-pagination js-hero-pagination"></div>
+                    </div>
                 </div>
           </div>
         </section>
