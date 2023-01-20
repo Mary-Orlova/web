@@ -19,12 +19,13 @@
   <script defer src="js/tabs.js"></script>
   <script defer src="js/accordion.min.js"></script>
   <script defer src="js/accordion-init.js"></script>
+  <script defer src="js/burger.js"></script>
 </head>
 <body>
     <h1 class="visually-hidden">Евклид проектные системы</h1>
     <header class="header">
         <div class="header__container container">
-            <button class="header__burger btn-reset hamburger--3dx hamburger" data-burger aria-label="Открыть меню" aria-expanded="false">
+            <button class="header__burger btn-reset hamburger--3dx hamburger js-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
                 <span class="hamburger__box">
                   <span class="hamburger__inner">
                   </span>
@@ -34,14 +35,17 @@
                 <a class="header__logo" href="/">
                     <img src="img/logo.svg" alt="Логотип Евклид проектные системы"></a>
                 <nav class="header__nav menu-nav">
-                    <ul class="header__menu list-reset">
-                        <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#about">О нас</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Проекты</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#step">Этапы</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Отзывы</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#contacts">Контакты</a></li>
-                    </ul>
+                    <div class="header__menu-wrap js-menu-wrap">
+                        <ul class="header__menu list-reset">
+                            <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#about">О нас</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#">Проекты</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#step">Этапы</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#">Отзывы</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#contacts">Контакты</a></li>
+                        </ul>
+                    </div>
+ 
                     <a class="btn-reset header__search-btn" href="#" target="_blank">
 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
