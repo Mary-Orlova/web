@@ -8,6 +8,7 @@
 }
 
 .header__container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -22,7 +23,8 @@
 }
 
 .header__logo,
-.header__search-btn {
+.header__search-btn,
+.header__close-btn {
   flex-shrink: 0;
 }
 
@@ -84,26 +86,88 @@
   transform: scaleX(1);
 }
 
-.header__search-btn {
+.header__search-btn,
+.header__close-btn {
+  flex-shrink: 0;
   width: 24px;
   height: 24px;
+  line-height: 1;
+  color: var(--dark);
   outline: none;
   transition: color var(--short);
-
-  fill: var(--dark);
-  stroke: var(--dark);
 }
 
-.header__search-btn:focus:not(:hover:not(:active)) {
-  outline: 2px solid var(--orange);
-  outline-offset: 5px;
+.header__search-btn--right {
+  margin-right: 22px;
+}
 
-  stroke: var(--orange);
+.header__close-btn {
+  color: var(--light-gray);
+}
+
+.header__search-btn:focus:not(:hover),
+.header__close-btn:focus:not(:hover) {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.header__close-btn:focus:not(:hover) {
+  color: var(--light-gray);
 }
 
 .header__search-btn:active {
-  fill: var(--dark-orange);
-  stroke: var(--dark-orange);
+  color: var(--dark-orange);
+}
+
+.header__close-btn:active {
+  color: var(--dark);
+}
+
+.header__search-form {
+  position: absolute;
+  z-index: 14;
+  top: 6px;
+  right: 50px;
+  display: none;
+  align-items: center;
+  width: 539px;
+  padding: 15px 13px 18px 30px;
+  border-radius: 24px;
+  background-color: var(--white);
+  box-shadow: 0 0 20px rgba(0, 0, 0, .12);
+  transform-origin: right;
+}
+
+.header__search-form.is-opened {
+  display: flex;
+  animation-name: search-open;
+  animation-duration: .3s;
+}
+
+.header__search-form.is-closed {
+  animation-name: search-close;
+  animation-duration: .3s;
+}
+
+.header__search-input {
+  flex-grow: 1;
+  margin-right: 14px;
+  padding-bottom: 5px;
+  width: 222px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--light-gray);
+  font-size: 18px;
+  font-weight: var(--medium);
+  transition: border-color var(--short);
+}
+
+.header__search-input::placeholder {
+  transition: opacity var(--medium);
+}
+
+.header__search-input:focus::placeholder {
+  opacity: 0;
 }
 
 @media (any-hover: hover) {
@@ -112,7 +176,14 @@
   }
 
   .header__search-btn:hover:not(:active) {
-    fill: var(--orange);
-    stroke: var(--orange);
+    color: var(--orange);
+  }
+
+  .header__close-btn:hover:not(:active) {
+    color: var(--light-gray);
+  }
+
+  .header__search-input:hover {
+    border-color: var(--orange);
   }
 }

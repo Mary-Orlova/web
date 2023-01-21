@@ -93,7 +93,7 @@
     left: 0;
     display: none;
     width: 420px;
-    height: 100vh;
+    height: 808px;
     padding: 162px 80px 40px 49px;
     background-color: #ffffff;
     box-shadow: 0 0 20px rgba(0, 0, 0, .3);
@@ -123,7 +123,18 @@
   }
 
   .header__menu-item {
+    margin-top: 10px;
     margin-bottom: 61px;
+  }
+
+
+  .header__search-form {
+    width: 400px;
+  }
+
+  .header__search-input {
+    padding-bottom: 6px;
+    font-size: 16px;
   }
 
   .header__burger.hamburger {
@@ -375,10 +386,26 @@
     border-radius: 0 0 24px 24px;
   }
 
-  .header__menu-wrap {
-    padding-top: 145px;
+  .header__container {
+    position: static;
   }
 
+  .header__menu-wrap {
+    padding-top: 145px;
+    height: 771px;
+  }
+
+  .header__search-form {
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-width: 320px;
+    min-height: 69px;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    border-radius: 0;
+  }
+  
   .hero {
     margin-bottom: 37px;
   }
@@ -495,6 +522,7 @@
   }
 
   .header__menu-wrap {
+    height: 400px;
     width: 100%;
     padding: 79px 15px 40px;
   }
@@ -503,7 +531,7 @@
     font-size: 16px;
     line-height: 20px;
   }
-
+  
   .header__menu-item {
     margin-bottom: 32px;
   }
