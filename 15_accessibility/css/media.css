@@ -86,12 +86,60 @@
     margin: 0;
   }
 
-  .header__menu {
+  .header__menu-wrap {
     position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
     display: none;
+    width: 420px;
+    height: 808px;
+    padding: 162px 80px 40px 49px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    transform: translateX(-100%);
+  }
+
+  .header__menu {
+    display: block;
+    max-height: 100%;
+    margin: 0;
+    overflow-y: auto;
+    font-weight: var(--bold);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .header__menu-wrap.is-active {
+    display: block;
+    transform: translateX(0);
+    animation-name: menu-open;
+    animation-duration: 0.3s;
+  }
+
+  .header__menu-wrap.is-closed {
+    animation-name: menu-close;
+    animation-duration: 0.3s;
+  }
+
+  .header__menu-item {
+    margin-top: 10px;
+    margin-bottom: 61px;
+  }
+
+
+  .header__search-form {
+    width: 400px;
+  }
+
+  .header__search-input {
+    padding-bottom: 6px;
+    font-size: 16px;
   }
 
   .header__burger.hamburger {
+    position: relative;
+    z-index: 13;
     display: inline-block;
     width: 30px;
     height: 23px;
@@ -107,10 +155,6 @@
     padding: 160px 77px;
   }
 
-  .hero__slider {
-    background-image: url("../img/slide1@1024.png");
-  }
-
   .hero__title {
     margin-bottom: 16px;
     font-size: 60px;
@@ -124,6 +168,18 @@
 
   .hero__text:last-of-type {
     margin-bottom: 60px;
+  }
+
+  .hero__slide--one {
+    background-image: url("../img/hero_slider_one@1024.jpeg");
+  }
+
+  .hero__slide--two {
+    background-image: url("../img/hero_slider_two@1024.jpeg");
+  }
+
+  .hero__slide--three {
+    background-image: url("../img/hero_slider_three@1024.jpeg");
   }
 
   .btn--big {
@@ -312,8 +368,8 @@
   }
 
   .footer__feedback {
-    max-width: 541px;
     width: 100%;
+    max-width: 541px;
     margin-bottom: 50px;
   }
 
@@ -330,6 +386,26 @@
     border-radius: 0 0 24px 24px;
   }
 
+  .header__container {
+    position: static;
+  }
+
+  .header__menu-wrap {
+    padding-top: 145px;
+    height: 771px;
+  }
+
+  .header__search-form {
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-width: 320px;
+    min-height: 69px;
+    padding-right: var(--container-padding);
+    padding-left: var(--container-padding);
+    border-radius: 0;
+  }
+  
   .hero {
     margin-bottom: 37px;
   }
@@ -353,8 +429,16 @@
     margin-bottom: 60px;
   }
 
-  .hero__slider {
-    background-image: url("../img/slider1@768.png");
+  .hero__slide--one {
+    background-image: url("../img/hero_slider_one@768.jpeg");
+  }
+
+  .hero__slide--two {
+    background-image: url("../img/hero_slider_two@768.jpeg");
+  }
+
+  .hero__slide--three {
+    background-image: url("../img/hero_slider_three@768.jpeg");
   }
 
   .btn--big {
@@ -421,6 +505,8 @@
     --container-padding: 15px;
     --dafault-fs: 14px;
     --default-lh: 28px;
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
   }
 
   .section-title {
@@ -433,6 +519,21 @@
     margin-bottom: 30px;
     border-radius: 0 0 16px 16px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+  }
+
+  .header__menu-wrap {
+    height: 400px;
+    width: 100%;
+    padding: 79px 15px 40px;
+  }
+
+  .header__menu {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .header__menu-item {
+    margin-bottom: 32px;
   }
 
   .header__logo {
@@ -470,7 +571,18 @@
 
   .hero__slider {
     border-radius: 16px;
-    background-image: url("../img/slider1@320.png");
+  }
+
+  .hero__slide--one {
+    background-image: url("../img/hero_slider_one@320.jpeg");
+  }
+
+  .hero__slide--two {
+    background-image: url("../img/hero_slider_two@320.jpeg");
+  }
+
+  .hero__slide--three {
+    background-image: url("../img/hero_slider_three@320.jpeg");
   }
 
   .btn--big {
@@ -658,7 +770,7 @@
     width: 30px;
     height: 30px;
   }
-  
+
   .footer {
     padding-top: 33px;
     padding-bottom: 30px;
@@ -678,7 +790,7 @@
     margin-bottom: 17px;
     border-radius: 1px solid var(--light-dark);
   }
- 
+
   .feedback__input {
     padding-left: 20px;
   }
@@ -689,9 +801,9 @@
 
   .feedback__submit-btn {
     padding: 12px 28px;
+    border-radius: 8px;
     font-size: 12px;
     line-height: 15px;
-    border-radius: 8px;
   }
 
   .socials__link {

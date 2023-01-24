@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Евклид проектные системы</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
   <link
@@ -13,12 +14,19 @@
     href="favicon.ico"
     type="image/x-icon"
   >
+  <script defer src="js/swiper-min.js"></script>
+  <script defer src="js/hero-slider.js"></script>
+  <script defer src="js/tabs.js"></script>
+  <script defer src="js/accordion.min.js"></script>
+  <script defer src="js/accordion-init.js"></script>
+  <script defer src="js/burger.js"></script>
+  <script defer src="js/form.js"></script>
 </head>
 <body>
     <h1 class="visually-hidden">Евклид проектные системы</h1>
     <header class="header">
         <div class="header__container container">
-            <button class="header__burger btn-reset hamburger--3dx hamburger" data-burger aria-label="Открыть меню" aria-expanded="false">
+            <button class="header__burger btn-reset hamburger--3dx hamburger js-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
                 <span class="hamburger__box">
                   <span class="hamburger__inner">
                   </span>
@@ -28,21 +36,43 @@
                 <a class="header__logo" href="/">
                     <img src="img/logo.svg" alt="Логотип Евклид проектные системы"></a>
                 <nav class="header__nav menu-nav">
-                    <ul class="header__menu list-reset">
-                        <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#about">О нас</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Проекты</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#step">Этапы</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#">Отзывы</a></li>
-                        <li class="header__menu-item"><a class="header__menu-link" href="#contacts">Контакты</a></li>
-                    </ul>
-                    <a class="btn-reset header__search-btn" href="#" target="_blank">
+                    <div class="header__menu-wrap js-menu-wrap">
+                        <ul class="header__menu list-reset">
+                            <li class="header__menu-item visually-hidden"><a class="header__menu-link" href="#">Главная</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#about">О нас</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#">Проекты</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#step">Этапы</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#">Отзывы</a></li>
+                            <li class="header__menu-item"><a class="header__menu-link" href="#contacts">Контакты</a></li>
+                        </ul>
+                    </div>
+ 
+                    <a class="btn-reset header__search-btn js-open-search" href="#">
 
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)"/>
-                            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke-width="2"/>
+                            <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                            <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
                             </svg>
+                    </a>
+                    <form class="header__search-form js-form" action="/" method="GET">
+                        <input class="header__search-input" type="text" placeholder="Что будем искать?">
+                        <a class="btn-reset header__search-btn header__search-btn--right" href="#" type="submit">
+
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="7.56126" height="1.89031" transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6064 17.3762)" fill="currentColor"/>
+                                <path d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                                
                         </a>
+                        <button class="btn-reset header__close-btn js-close-search" type="button">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291" transform="rotate(45 8.9541 7.30432)" fill="currentColor"/>
+                                <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291" transform="rotate(-45 7.30469 15.5524)" fill="currentColor"/>
+                                <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                 
+                        </button>
+                    </form>
                 </nav>
         </div>
     </header>
@@ -56,7 +86,15 @@
                         <p class="hero__text">Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей день остаются уделом проектантов</p>
                         <button class="btn-reset btn btn--big">Заказать расчёт</button>
                     </div>
-                    <div class="hero__slider"></div>
+                    <div class="hero__slider js-hero--slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide hero__slide hero__slide--one"></div>
+                            <div class="swiper-slide hero__slide hero__slide--two"></div>
+                            <div class="swiper-slide hero__slide hero__slide--three"></div>
+                          </div>
+                
+                          <div class="hero__slider-pagination swiper-pagination js-hero-pagination"></div>
+                    </div>
                 </div>
           </div>
         </section>
@@ -107,15 +145,15 @@
         <section class="step" id="step">
             <div class="container">
                 <h2 class="section-title step__title">Как мы&nbsp;работаем</h2>
-                    <div class="step__tabs tabs">
+                    <div class="step__tabs tabs js-tabs-wrap">
                         <ul class="list-reset tabs__btn-list ">
-                            <li class="tabs__btn-item"><button class="tabs__btn active btn-reset">1&nbsp;шаг</button> </li>   
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">2&nbsp;шаг</button> </li>
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">3&nbsp;шаг</button> </li>
-                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset">4&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn active btn-reset js-tab-btn" data-path="one">1&nbsp;шаг</button> </li>   
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="two">2&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="three">3&nbsp;шаг</button> </li>
+                            <li class="tabs__btn-item"><button class="tabs__btn btn-reset js-tab-btn" data-path="four">4&nbsp;шаг</button> </li>
                         </ul>
 
-                        <div class="tabs__content-wrap tabs__content-wrap--consultation">
+                        <div class="tabs__content-wrap active js-tab-content" data-target="one">
                             <div class="tabs__content">
                                 <h3 class="tabs__title">Проводим консультацию</h3>
                                 <p class="section-descr tabs__descr">
@@ -140,6 +178,68 @@
                                 </picture>
                             </div>
                         </div>
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="two">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Составляем смету</h3>
+                                <p class="section-descr tabs__descr">
+                                    Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А&nbsp;также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с&nbsp;зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_two@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_two@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_two.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="three">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Привлекаем подрядчиков</h3>
+                                <p class="section-descr tabs__descr">
+                                    Идейные соображения высшего порядка, а&nbsp;также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по&nbsp;разработке прогресса профессионального сообщества.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_three@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_three@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_three.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
+                        <div class="tabs__content-wrap js-tab-content" data-target="four">
+                            <div class="tabs__content">
+                                <h3 class="tabs__title">Инспектируем все этапы работ</h3>
+                                <p class="section-descr tabs__descr">
+                                    Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.</p>
+                                    <div class="tabs__links-wrap">
+                                        <a class="btn-reset tabs__link btn tabs__link--detail" href="#">Подробнее</a>
+                                        <a class="btn-reset tabs__link btn btn--consultation" href="#">Договор</a>
+                                    </div>
+                            </div>
+
+                            <div class="tabs__image-wrap">
+                                <picture>
+                                    <source srcset="img/note_four@320.jpeg" media="(max-width: 440px)">
+                                    <source srcset="img/note_four@768.jpeg" media="(max-width: 962px)">
+                                    <img class="tabs__image" src="img/note_four.jpeg" alt="Проводим консультацию">
+                                </picture>
+                            </div>
+                        </div>
+
                     </div>
             </div>
         </section> 
@@ -147,45 +247,70 @@
         <section class="ask">
             <div class="container">
                 <h2 class="section-title ask__title">Часто задаваемые вопросы</h2>
-                <ul class="list-reset accordion">
-                    <li class="accordion__item">
+                <ul class="list-reset accordion accordion-container">
+                    <li class="accordion__item ac">
                         <h3 class="accordion__title">
-                            <button class="btn-reset accordion__btn">
+                            <button class="btn-reset accordion__btn ac-trigger">
                                 Из&nbsp;чего формируется конечная стоимость проекта?
                             </button>
                         </h3>
+
+                        <div class="accordion__content ac-panel">
+                              <p class="accordion__text">Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас 
+                                к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть своевременно верифицированы. 
+                                Но&nbsp;высококачественный прототип будущего проекта является качественно новой ступенью первоочередных требований. А&nbsp;ещё некоторые особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и&nbsp;морали. И&nbsp;нет сомнений, что явные признаки победы институционализации призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть указаны как претенденты на&nbsp;роль ключевых факторов.</p>
+                                <p class="accordion__text">Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к&nbsp;ответу. Явные признаки победы институционализации набирают популярность среди определённых слоёв населения, 
+                                    а&nbsp;значит, должны быть объединены в&nbsp;целые кластеры себе подобных. Банальные, но&nbsp;неопровержимые выводы, 
+                                    а&nbsp;также многие известные личности призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою очередь, должны быть представлены в&nbsp;исключительно положительном свете.</p>
+                            </div>
                     </li>
 
-                    <li class="accordion__item">
+                    <li class="accordion__item ac">
                         <h3 class="accordion__title">
-                            <button class="btn-reset accordion__btn">
+                            <button class="btn-reset accordion__btn ac-trigger">
                                 У&nbsp;меня есть свой проект. Сможем&nbsp;ли мы&nbsp;его доработать&nbsp; <span class="light-gray">/</span> реализовать?
                             </button>
                         </h3>
+
+                        <div class="accordion__content ac-panel">
+                              <p class="accordion__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, autem. Repellendus obcaecati veniam illo recusandae corporis deserunt tempore, nisi earum numquam sapiente possimus necessitatibus voluptas suscipit architecto officiis vitae dolorem.</p>
+                          </div>
                     </li>
 
-                    <li class="accordion__item">
+                    <li class="accordion__item ac">
                         <h3 class="accordion__title">
-                            <button class="btn-reset accordion__btn">
+                            <button class="btn-reset accordion__btn ac-trigger">
                                 Я&nbsp;выбираю между разными компаниями. В&nbsp;чём ваше отличие?
                             </button>
                         </h3>
+
+                        <div class="accordion__content ac-panel">
+                              <p class="accordion__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, autem. Repellendus obcaecati veniam illo recusandae corporis deserunt tempore, nisi earum numquam sapiente possimus necessitatibus voluptas suscipit architecto officiis vitae dolorem.</p>
+                          </div>
                     </li>
 
-                    <li class="accordion__item">
+                    <li class="accordion__item ac">
                         <h3 class="accordion__title">
-                            <button class="btn-reset accordion__btn">
+                            <button class="btn-reset accordion__btn ac-trigger">
                                 Могу&nbsp;ли я&nbsp;делегировать вам работу&nbsp; <span class="light-gray">/</span> согласование с&nbsp;подрядчиком&nbsp; <span class="light-gray">/</span> организацией?
                             </button>
                         </h3>
+
+                        <div class="accordion__content ac-panel">
+                              <p class="accordion__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, autem. Repellendus obcaecati veniam illo recusandae corporis deserunt tempore, nisi earum numquam sapiente possimus necessitatibus voluptas suscipit architecto officiis vitae dolorem.</p>
+                          </div>
                     </li>
 
-                    <li class="accordion__item">
+                    <li class="accordion__item ac">
                         <h3 class="accordion__title">
-                            <button class="btn-reset accordion__btn">
+                            <button class="btn-reset accordion__btn ac-trigger">
                                 Могу&nbsp;ли я&nbsp;вернуть деньги на&nbsp;каком-либо из&nbsp;этапов работ?
                             </button>
                         </h3>
+
+                        <div class="accordion__content ac-panel">
+                              <p class="accordion__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita, autem. Repellendus obcaecati veniam illo recusandae corporis deserunt tempore, nisi earum numquam sapiente possimus necessitatibus voluptas suscipit architecto officiis vitae dolorem.</p>
+                          </div>
                     </li>
                 </ul>
             </div>
