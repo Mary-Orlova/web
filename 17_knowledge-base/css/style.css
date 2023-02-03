@@ -265,8 +265,8 @@ body {
 
 /* форма заказа */
 .order {
-  margin-right: 58px;
   width: 440px;
+  margin-right: 58px;
 }
 
 .order__form {
@@ -278,9 +278,9 @@ body {
 }
 
 .check {
+  position: relative;
   display: flex;
   flex-direction: column-reverse;
-  position: relative;
 }
 
 .order__input {
@@ -301,7 +301,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  color: #FF5C00;
+  color: #ff5c00;
 }
 
 .order__input:focus-visible {
@@ -343,91 +343,107 @@ body {
 
 /* тултип */
 .tooltip__box {
-  vertical-align: bottom;
-  background-color: #fff;
-  width: 375px;
+  display: flex;
+  max-width: 355px;
+  background-color: #ffffff;
+  padding-bottom: 20px;
 }
 
 .tooltip__wrap {
+  padding-right: 70px;
   display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  justify-content: right center;
-  vertical-align: middle;
-  width: 268px;
-  padding-top: 20px;
-  padding-left: 20px;
+  flex-direction: column-reverse;
+}
+
+.popper-btn {
+  fill: #bcbcbc;
 }
 
 .tooltip {
-	position: relative;
+  position: relative;
 }
 
 .tooltip__text {
-  display: inline-block;
-  margin-right: 1px;
-  margin-bottom: 0;
+  margin: 0;
+  padding-top: 20px;
+  padding-left: 20px;
   font-size: 14px;
   line-height: 24px;
 }
 
 .tooltip__btn {
-	border: none;
-	border-bottom: 1px dashed currentColor;
-	padding: 0;
-	color: #000;
-	background-color: transparent;
-	cursor: pointer;
+  padding: 0;
+  border: none;
+  border-bottom: 1px dashed currentColor;
+  color: #000000;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .tooltip__txt {
-	position: absolute;
-	left: 50%;
-	bottom: calc(100% + 10px);
-	z-index: 3;
-	padding: 20px;
-	width: max-content;
-	max-width: 370px;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 200%;
-	color: #fff;
-	background: #222;
-	opacity: 0;
-	visibility: hidden;
-	transform: translateX(-50%) translateY(10px);
-	transition: opacity .3s ease-in-out, transform .3s ease-in-out, visibility .3s ease-in-out;
+  position: absolute;
+  z-index: 3;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  visibility: hidden;
+  width: max-content;
+  max-width: 163px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  color: #ffffff;
+  opacity: 0;
+  background: #222222;
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out, visibility .3s ease-in-out;
+  transform: translateX(-50%) translateY(10px);
 }
 
-.tooltip__btn:hover+.tooltip__txt {
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(-50%) translateY(0);
-}
-
-.tooltip__btn:focus+.tooltip__txt {
-	opacity: 1;
-	visibility: visible;
-	transform: translateX(-50%) translateY(0);
+.tooltip__btn:focus + .tooltip__txt {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .popper-tooltip {
-	opacity: 0;
-	transition: opacity 0.3s ease-in-out;
-  background-color: #666666;
-  font-weight: 600;
+  position: absolute;
+  padding-top: 7px;
+  padding-right: 15px;
+  padding-bottom: 14px;
+  padding-left: 15px;
   font-size: 12px;
+  font-weight: 600;
   line-height: 16px;
-  color: #FFFFFF;
+  color: #ffffff;
+  opacity: 0;
+  background-color: #666666;
   cursor: #ffffff;
+  transition: opacity .3s ease-in-out;
+}
+
+.popper-tooltip::after:hover,
+.popper-tooltip::after:focus-visible,
+.popper-tooltip::after:active {
+  content: "";
+  position: absolute;
+  top: 16px;
+  bottom: 20px;
+  left: 59px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid #666666;
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+  opacity: 1;
+
+}
+
+.popper-btn:focus-visible,
+.popper-tooltip:active {
+  fill: #ccb26e;
 }
 
 .popper-btn:focus + .popper-tooltip {
-	opacity: 1;
-}
-
-.popper-btn:hover + .popper-tooltip {
-	opacity: 1;
+  opacity: 1;
 }
 
 @media (any-hover: hover) {
@@ -437,5 +453,19 @@ body {
 
   .order__input::placeholder:hover {
     color: #ffffff;
+  }
+
+  .tooltip__btn:hover + .tooltip__txt {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .popper-btn:hover {
+    fill: #ccb26e;
+  }
+
+  .popper-btn:hover + .popper-tooltip {
+    opacity: 1;
   }
 }
