@@ -41,7 +41,7 @@ body {
 }
 
 .container {
-  width: 2650px;
+  width: 2450px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 36px;
@@ -144,28 +144,7 @@ body {
   outline-offset: 2px;
 }
 
-/* блок-материал */
-.material {
-  display: inline-block;
-  width: 176px;
-  height: 39px;
-  margin-right: 58px;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.material__wrapper {
-  display: flex;
-}
-
-.material__text {
-  margin-right: 66px;
-  margin-bottom: 11px;
-  padding-top: 9px;
-  padding-left: 15px;
-}
-
-/* выпадающий список */
+/* блок-материал, выпадающий список */
 .task {
   margin-right: 58px;
 }
@@ -254,13 +233,36 @@ body {
   margin-right: 58px;
 }
 
-/* скрол-бар  */
+/* поиск всех селекторов, где есть ground-pane -делает серым*/
+[class*="ground-pane"] {
+  filter: grayscale(1);
+}
+
+.simplebar-content-wrapper {
+  overflow: auto;
+}
+
 .customScroll {
+  width: 400px;
+  height: 300px;
   margin-right: 58px;
   padding-top: 20px;
   padding-right: 30px;
   padding-left: 29px;
   background: #ffffff;
+}
+
+
+.simplebar-scrollbar{
+  width: 6px;
+  background: #CCB26E;
+  border-radius: 5px;
+  height: 100%;
+  font-size: 5em;
+}
+
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 /* форма заказа */
@@ -297,10 +299,9 @@ body {
   transition: background-color .3s;
 }
 
-.js-validate-error-label {
+.just-validate-error-label {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -25px;
   color: #ff5c00;
 }
 
@@ -343,16 +344,12 @@ body {
 
 /* тултип */
 .tooltip__box {
-  display: flex;
-  max-width: 355px;
-  background-color: #ffffff;
+  width: 375px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 78px;
   padding-bottom: 20px;
-}
-
-.tooltip__wrap {
-  padding-right: 70px;
-  display: flex;
-  flex-direction: column-reverse;
+  background-color: #ffffff;
 }
 
 .popper-btn {
@@ -364,9 +361,9 @@ body {
 }
 
 .tooltip__text {
+  display: inline;
   margin: 0;
-  padding-top: 20px;
-  padding-left: 20px;
+  padding: 0;
   font-size: 14px;
   line-height: 24px;
 }
@@ -406,6 +403,12 @@ body {
 
 .popper-tooltip {
   position: absolute;
+  max-width: 176px;
+  white-space: wrap;
+  word-wrap: nowrap;
+  top: -50%;
+  left: -50%;
+  bottom: 10px !important;
   padding-top: 7px;
   padding-right: 15px;
   padding-bottom: 14px;
@@ -418,31 +421,49 @@ body {
   background-color: #666666;
   cursor: #ffffff;
   transition: opacity .3s ease-in-out;
+
+	transform: translate(-50%);
+	transform-style: preserve-3d;
+	z-index: 200;
+	font-size: 0.9em;
 }
 
-.popper-tooltip::after:hover,
-.popper-tooltip::after:focus-visible,
-.popper-tooltip::after:active {
+.popper-tooltip::before {
   content: "";
-  position: absolute;
-  top: 16px;
-  bottom: 20px;
-  left: 59px;
-  width: 0;
-  height: 0;
-  border-top: 10px solid #666666;
-  border-right: 6px solid transparent;
-  border-left: 6px solid transparent;
-  opacity: 1;
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	transform-origin: 50% 50%;
+	transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+	background-color: #666666;
+	left: 50%;
+	bottom: -8px;
+	z-index: -1;
+}
+
+.popper-tooltip::after {
+  content: "";
+	position: absolute;
+	display: block;
+	width: 10px;
+	height: 10px;
+	transform-origin: 50% 50%;
+	transform: rotate(45deg) translateX(-50%);
+	background-color: #666666;
+	left: 50%;
+	bottom: -8px;
+	z-index: 400;
 
 }
 
 .popper-btn:focus-visible,
 .popper-tooltip:active {
+  display: block;
   fill: #ccb26e;
 }
 
-.popper-btn:focus + .popper-tooltip {
+.popper-btn:focus + .popper-tooltip, .popper-tooltip::after {
   opacity: 1;
 }
 
