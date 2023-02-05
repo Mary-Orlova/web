@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивные элементы</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script defer src="js/map.js"></script>
+
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+  <script defer src="js/choices.min.js"></script>
+  <script defer src="js/select.js"></script>
+
+
+  <script defer src="libs/just-validate.min.js"></script>
+  <script defer src="libs/inputmask.min.js"></script>
+  <script defer src="js/valid.js"></script>
+
+  <script defer src="js/popper.js"></script>
+  <script defer src="js/tooltip.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title visually-hidden">Отработка интерактивных элементов</h1>
+        </header>
+
+        <main class="main">
+            <div class="checkbox">
+                <h2 class="checkbox__title">Категории:</h2>
+                <form class="checkbox__wrapper" action="/">
+                    <label class="checkbox__label" for="check-1">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-1" id="check-1">
+                        <span class="checkbox__text">Динозавтры </span></label>
+    
+                    <label class="checkbox__label" for="check-2">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-2" id="check-2">
+                        <span class="checkbox__text">Медведи</span></label>
+        
+                    <label class="checkbox__label" for="check-3">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-3" id="check-3">
+                        <span class="checkbox__text">Косули</span></label>
+        
+                    <label class="checkbox__label" for="check-4">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-4" id="check-4">
+                        <span class="checkbox__text">Лисы</span></label>
+        
+                    <label class="checkbox__label" for="check-5">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-5" id="check-5">
+                        <span class="checkbox__text">Волки</span></label>
+    
+                    <label class="checkbox__label" for="check-6">
+                        <input class="checkbox__input visually-hidden" type="checkbox" name="check-6" id="check-6">
+                        <span class="checkbox__text">Олени и лоси</span></label>
+                    </form>
+            </div>
+    
+            <div class="task">
+                <select class="select" name="select">
+                    <option value="">Выберите</option>
+                    <option value="Материал">Материал</option>
+                    <option value="Древесина">Древесина</option>
+                    <option value="Металл">Металл</option>
+                    <option value="Камень">Камень</option>
+                    <option value="Пластик">Пластик</option>
+                    <option value="Композитный">Композитный</option>
+                    <option value="Гипс">Гипс</option>
+                </select>
+            </div>
+
+            <div class="mymap1" 
+                id="Mymap1" 
+                style="width: 460px; height: 460px">
+            </div>
+
+            <div class="customScroll" data-simplebar>
+                <p class="text scroll__text">Сложно сказать, почему многие известные личности представлены в&nbsp;исключительно положительном свете. Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений. Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, обнародованы. Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а&nbsp;также свежий взгляд на&nbsp;привычные вещи&nbsp;&mdash; безусловно открывает новые горизонты для первоочередных требований.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.
+                Следует отметить, что социально-экономическое развитие способствуе
+                Следует отметить, что социально-экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик
+                </p>
+            </div>
+
+
+            <div class="order">
+                <form class="order__form" action="/" method="POST" novalidate="novalidate">
+                    <div class="check">
+                        <input class="order__input name" type="text" name="name" placeholder="Имя*" data-validate-field="name" required aria-label="Поле для заполнения - имя">
+                    </div>
+                   
+                    <div class="check"> 
+                        <input class="order__input tel" type="tel" name="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" required aria-label="Поле для заполнения мобильного телефона">
+                    </div>
+                   
+                    <div class="check">
+                        <input class="order__input mail" type="mail" name="email" placeholder="Email*" data-validate-field="mail" required aria-label="Поле для заполнения электронной почты">
+                    </div>
+                   
+                        
+                    <div class="order__form-bottom">
+                        <button class="btn-reset order__submit-btn" type="submit" aria-label="Кнопка Заказать">
+                            Заказать
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tooltip__box">
+                <p class="tooltip__text">Следует отметить, что социально&#8209;экономическое развитие способствует повышению качества переосмысления внешнеэкономических политик.</p>
+                <span class="btn-reset popper-btn" id="button" aria-describedby="tooltip">
+                    <svg  width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z"/>
+                    </svg>
+                </span> 
+                    
+                <span class="popper-tooltip" id="tooltip" role="tooltip">
+                    Глава 2, страница 176
+                </span>
+            </div> 
+            
+        </main>
+     </div>
+  
+</body>
+</html>
