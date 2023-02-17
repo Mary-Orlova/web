@@ -1,0 +1,39 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials__item {
+  display: inline-block;
+  margin-right: 30px;
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+.socials__link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  transform: fill var(--short);
+  fill: var(--dark-gray);
+}
+
+.socials__link:focus:not(:active) {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.socials__link:active {
+  fill: var(--dark-orange);
+}
+
+@media (any-hover: hover) {
+  .socials__link:hover:not(:active) {
+    fill: var(--orange);
+  }
+}

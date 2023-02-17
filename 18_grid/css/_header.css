@@ -1,0 +1,157 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  background-color: var(--blue);
+}
+
+.header__container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__burger {
+  display: none;
+}
+
+.header__logo {
+  width: 94px;
+  height: 21px;
+  flex-shrink: 0;
+  margin-right: 546px;
+}
+
+.header__nav,
+.header__menu {
+  display: flex;
+}
+
+.header__nav {
+  align-items: center;
+}
+
+.header__menu {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.header__menu-item {
+  margin-right: 56px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #FFFFFF;
+}
+
+.header__menu-link {
+  position: relative;
+  outline: none;
+}
+
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--orange);
+  transition: transform var(--short);
+  transform: scaleX(0);
+}
+
+.header__menu-link:focus:not(:hover:not(:active)) {
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+}
+
+.header__menu-link:active {
+  color: var(--orange);
+}
+
+.header__menu-link:active::after {
+  color: var(--black);
+  background-color: var(--orange);
+  transform: scaleX(1);
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 56px;
+}
+
+.nav__link {
+  position: relative;
+  line-height: 21px;
+  color: #1c1c1c;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav__link:focus {
+  outline-offset: 2px;
+  outline: 1px solid #71a7e2;
+}
+
+.nav__link:hover {
+  color: #71a7e2;
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #3474ba;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav__link:active {
+  outline: none;
+}
+
+.nav__link:active::after {
+  opacity: 1;
+}
+
+.header__close-btn {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  color: var(--dark);
+  outline: none;
+  transition: color var(--short);
+}
+
+.header__close-btn {
+  color: #8753db;
+}
+
+.header__close-btn:focus:not(:hover) {
+  outline: 2px solid #8753db;
+  outline-offset: 3px;
+}
+
+.header__close-btn:focus:not(:hover) {
+  color: #8753db;
+}
+
+
+.header__close-btn:active {
+  color: #05010a;
+}
+
+
+@media (any-hover: hover) {
+  .header__menu-link:hover:not(:active)::after {
+    transform: scaleX(1);
+  }
+
+  .header__close-btn:hover:not(:active) {
+    color: #53d2db;
+  }
+}

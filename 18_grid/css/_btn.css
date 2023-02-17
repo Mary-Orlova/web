@@ -1,0 +1,54 @@
+.btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 24px 75.5px;
+  border-radius: 20px;
+  font-family: inherit;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 700;
+  font-weight: 700;
+  line-height: 21px;
+  line-height: 21px;
+  color: #ffffff;
+  outline: none;
+  background-color: #3f2aff;
+  transition: background-color .3s ease-in-out;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  left: -3px;
+  border: 1px solid #3f2aff;
+  border-radius: inherit;
+  opacity: 0;
+  outline: none;
+  transition: opacity .3s ease-in-out;
+}
+
+.btn:focus {
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+}
+
+.btn:focus::after {
+  opacity: 1;
+}
+
+.btn:hover {
+  color: var(--white);
+  background-color: var(--deep-blue);
+}
+
+.btn:active {
+  background-color: #3f2aff;;
+}
+
+.btn:active::after {
+  opacity: 0;
+}
