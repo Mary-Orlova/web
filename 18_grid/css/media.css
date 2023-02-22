@@ -1,0 +1,117 @@
+@media (max-width: 800px) {
+  :root {
+    --container-padding: 39px;
+    --container-padding: 39px;
+    --container-max-width:
+  }
+
+  .body {
+    min-width: 768px;
+  }
+
+  .header__logo {
+    margin-right: 126px;
+  }
+}
+/* @media (max-width: 320px) {
+  .container {
+    padding-right: 25px;
+    padding-left: 15px;
+    width: 100%;
+  }
+
+  .header {
+    justify-content: center;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    vertical-align: middle;
+  }
+
+  .header__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .header__logo {
+    background-image: url('../img/logo@mobile.svg');
+    margin: 0;
+  }
+
+  .header__menu-wrap {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 220px;
+    height: 420px;
+    padding: 60px 20px 20px 30px;
+    background-color: var(--white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+    transform: translateX(-100%);
+  }
+
+  .header__menu {
+    display: block;
+    max-height: 100%;
+    margin: 0;
+    padding-left: 10px;
+    overflow-y: auto;
+    font-weight: var(--bold);
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  .header__menu-wrap.is-active {
+    display: block;
+    transform: translateX(0);
+    animation-name: menu-open;
+    animation-duration: 0.3s;
+  }
+
+  .header__menu-wrap.is-closed {
+    animation-name: menu-close;
+    animation-duration: 0.3s;
+  }
+
+  .header__menu-item {
+    margin-top: 10px;
+    margin-bottom: 61px;
+    color: var(--black);
+  }
+
+  .header__burger.hamburger {
+    position: relative;
+    z-index: 13;
+    display: inline-block;
+    width: 30px;
+    height: 23px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero {
+    margin-bottom: 36px;
+  }
+
+  .hero__wrapper {
+    padding: 160px 77px;
+  }
+
+  .hero__title {
+    margin-bottom: 16px;
+    font-size: 60px;
+    line-height: 73px;
+  }
+
+  .hero__text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .hero__text:last-of-type {
+    margin-bottom: 60px;
+  }
+} */

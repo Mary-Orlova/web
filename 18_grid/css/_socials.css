@@ -1,8 +1,8 @@
 .socials {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 }
 
 .socials__item {
@@ -20,6 +20,7 @@
   height: 24px;
   outline: none;
   transform: fill var(--short);
+
   fill: var(--dark-gray);
 }
 

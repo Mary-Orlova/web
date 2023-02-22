@@ -1,5 +1,4 @@
 .hero {
-  margin-bottom: 80px;
   background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
 }
 
@@ -14,27 +13,31 @@
 .hero__title {
   margin: 0;
   margin-bottom: 30px;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
+  font-family: "Roboto";
   font-size: 60px;
+  font-weight: 700;
+  font-style: normal;
   line-height: 60px;
-  color: #FFFFFF;
+  color: var(--white);
 }
 
 .hero__text {
-  margin: 0;
-  margin-bottom: 60px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
   display: flex;
   align-items: center;
-  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 60px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  color: var(--white);
 }
 
 .hero__img {
-  padding-top: 15px;
   margin-bottom: 8px;
+  padding-top: 15px;
+}
+
+.hero__btn {
+  padding: 24px 75.5px;
 }
 

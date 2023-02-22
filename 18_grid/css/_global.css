@@ -56,16 +56,23 @@ svg {
 body {
   min-width: 1440px;
   font-family: "Roboto", sans-serif;
+  font-size: var(--dafault-fs);
   font-weight: var(--regular);
-  font-size: 18px;
-  line-height: 21px;
+  line-height: var(--default-lh);
 }
 
 .container {
-  min-width: 1110px;
+  width: 100%;
+  max-width: var(--container-max-width);
   margin-right: auto;
   margin-left: auto;
-  padding: 0;
+  padding-right: var(--container-padding);
+  padding-left: var(--container-padding);
+}
+
+.burger {
+  display: none;
+  border: none;
 }
 
 .visually-hidden {
@@ -77,6 +84,3 @@ body {
   border: none;
 }
 
-/* .section-descr:last-child {
-  margin-bottom: 0;
-} */
