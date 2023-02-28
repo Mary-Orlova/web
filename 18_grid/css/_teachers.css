@@ -4,8 +4,6 @@
 }
 
 .teachers__title {
-  display: flex;
-  align-items: center;
   margin: 0;
   margin-bottom: 22px;
   padding-top: 77px;
@@ -16,7 +14,8 @@
 
 .teachers__cards {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-bottom: 76px;
 }
 

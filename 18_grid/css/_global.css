@@ -54,7 +54,7 @@ svg {
 }
 
 body {
-  min-width: 1440px;
+  min-width: 290px;
   font-family: "Roboto", sans-serif;
   font-size: var(--dafault-fs);
   font-weight: var(--regular);
@@ -83,4 +83,3 @@ body {
   display: none;
   border: none;
 }
-

@@ -7,18 +7,21 @@
   justify-content: center;
 }
 
-.socials__item {
-  list-style: none;
-}
-
 .footer__descr {
   display: flex;
   justify-content: center;
+  font-family: "Roboto";
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: var(--dark);
+  text-transform: uppercase;
   background-color: var(--white);
 }
 
 .footer__text {
   margin: 0;
+  padding-top: 3px;
 }
 
 .footer__span {

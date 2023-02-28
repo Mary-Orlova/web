@@ -7,6 +7,7 @@
 }
 
 .hero__left {
+  width: 459px;
   padding-top: 130px;
 }
 
@@ -32,12 +33,29 @@
   color: var(--white);
 }
 
+.hero__picture {
+  position: relative;
+  justify-content: center;
+}
+
 .hero__img {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  bottom: 0;
+  left: 110px;
   margin-bottom: 8px;
-  padding-top: 15px;
+}
+
+.hero__img-cube {
+  position: absolute;
+  top: 44px;
+  right: 0;
+  bottom: 0;
+  left: 15px;
 }
 
 .hero__btn {
+  margin-bottom: 130px;
   padding: 24px 75.5px;
 }
-

@@ -1,5 +1,5 @@
 .courses {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 .courses__title {
@@ -13,19 +13,43 @@
 }
 
 .courses__list {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .courses__item {
-  display: flex;
-  flex-wrap: nowrap;
-  border-radius: 15px;
+  border-radius: 20px;
   text-align: center left;
   background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 0;
+  max-width: 540px;
 }
 
-.courses__item:last-child {
+.courses__item-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-width: 540px;
+  min-height: 480px;
+  margin-bottom: 30px;
+
+  border-radius: 0 0 20px 20px;
+  background-color: var(--light-blue);
+  background-position: center;
+  background-size: cover;
+  margin-right: 30px;
+  max-width: 540px;
+}
+
+.courses__item-content:nth-child(2n) {
   margin-right: 0;
+}
+
+.course__picture {
+  width: 100%;
 }
 
 .courses__img {
@@ -37,10 +61,10 @@
   top: 10px;
   right: 0;
   bottom: 0;
-  left: 435px;
+  left: 82%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: baseline;
   margin: 0;
   padding: 0;
   font-size: 16px;
@@ -49,30 +73,10 @@
   color: var(--white);
 }
 
-.coueses__svg {
-  margin-right: 5px;
-}
-
 .courses__text {
   margin: 0;
-  padding-top: 4px;
-}
-
-.courses__item:nth-child(1n) {
-  padding-left: 0;
-}
-
-.courses__item-content {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  min-width: 540px;
-  min-height: 480px;
-  margin-bottom: 30px;
-  border-radius: 0 0 20px 20px;
-  background-color: var(--light-blue);
-  background-position: center;
-  background-size: cover;
+  padding-left: 5px;
+  padding-top: 3px;
 }
 
 .courses__detail {
@@ -80,6 +84,7 @@
   justify-content: center;
   padding-top: 20px;
   padding-left: 30px;
+  padding-right: 30px;
 }
 
 .courses__name {
@@ -93,7 +98,6 @@
 
 .courses__descr {
   margin: 0;
-  margin-bottom: 32px;
   font-size: 16px;
   font-weight: var(--regular);
   line-height: 24px;

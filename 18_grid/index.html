@@ -23,6 +23,7 @@
 
 <body>
     <header class="header">
+
         <div class="header__container container">
           <h1 class="visually-hidden">Курсы 3D моделирования</h1>
             <button class="header__burger btn-reset hamburger--3dx hamburger js-burger" data-burger aria-label="Открыть меню" aria-expanded="false">
@@ -57,14 +58,14 @@
               <div class="hero__wrapper">
                   <div class="hero__content">
                     <div class="row">
-                      <div class="hero__left col-lg-5 col-md-5 col-sm-5 col-5">
-                        <h2 class="hero__title">Курсы 3D моделирования</h2>
-                        <p class="hero__text">Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не&nbsp;следует, однако, забывать.</p>
-                      <button class="btn-reset btn hero__btn" aria-label="Кнопка выбор курса">Выбрать курс</button>
+                      <div class="hero__left col-lg-5 col-md-5 col-sm-5">
+                          <h2 class="hero__title">Курсы 3D моделирования</h2>
+                          <p class="hero__text">Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не&nbsp;следует, однако, забывать.</p>
+                        <button class="btn-reset btn hero__btn" aria-label="Кнопка выбор курса">Выбрать&nbsp;курс</button>
                       </div>
-
-                      <div class="col-lg-7 col-md-7 col-sm-5 col-5">
-                        <img class="hero__img" src="img/hero_img.svg" alt="3D модель">
+                      <div class="hero__picture col-lg-7 col-md-7 col-sm-7">
+                        <img class="hero__img-cube" src="img/hero__img-cube.svg" alt="3D модель">
+                        <img class="hero__img" src="img/hero__img.svg" alt="3D модель">
                       </div>
                     </div>
                   </div>
@@ -75,10 +76,10 @@
       <section class="advantages" id="about">
         <div class="container">
           <div class="advantages__box">
-            <img class="adventages__picture" src="img/advantages.svg" alt="Картинка блоки">
+            <img class="advantages__picture" src="img/advantages.svg" alt="Картинка блоки">
             <div class="advantages__more">
-              <h2 class="advantages__title">Преимущества <br>обучения в&nbsp;skillbox</h2>
-              <p class="advantages__descr">Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут <br> рассмотрены исключительно в&nbsp;разрезе маркетинговых предпосылок.
+              <h2 class="advantages__title">Преимущества обучения в&nbsp;skillbox</h2>
+              <p class="advantages__descr">Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно в разрезе маркетинговых предпосылок.
               </p>
             </div>
           </div>
@@ -92,31 +93,31 @@
 
               <div class="col-4 card" style="background-image: url('img/advantage_2.svg');">
                 <p class="advantages__text">
-                  Лично познакомитесь с&nbsp;одним из&nbsp;своих будущих преподавателей
+                  Лично познакомитесь с одним из своих будущих преподавателей
                 </p>
               </div>
 
               <div class="col-4 card" style="background-image: url('img/advantage_3.svg');">
                 <p class="advantages__text">
-                  Значимость этих проблем очевидна, поэтому стоит&nbsp; всегда быть внимательным
+                  Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным
                 </p>
               </div>
           </div>
         </div>
       </section>
 
-      <section class="teachers" id="teachers">
+     <section class="teachers" id="teachers">
         <div class="container">
           <h2 class="teachers__title">Преподаватели курсов</h2>
           <ul class="list-reset teachers__cards row">
-            <li class="col-lg-3 col-md-6 col-sm-6 col-12 teachers__item">
+            <li class="col-lg-3 col-md-6 col-sm-6 teachers__item">
               <div class="teachers__item-content">
                 <div class="teachers__img">
                   <picture>
                     <source srcset="img/teacher_1@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/teacher_1@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/teacher_1@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/teacher_1.jpeg" alt="Фотография Владимир Петров">
+                    <img class="teacher__foto" srcset="img/teacher_1.jpeg" alt="Фотография Владимир Петров">
                   </picture>
                 </div>
                 <h3 class="teachers__info">Владимир Петров</h3>
@@ -124,14 +125,14 @@
               </div>
             </li>
 
-            <li class="col-lg-3 col-md-6 col-sm-6 col-12 teachers__item">
+            <li class="col-lg-3 col-md-6 col-sm-6 teachers__item">
               <div class="teachers__item-content">
                 <div class="teachers__img">
                   <picture>
                     <source srcset="img/teacher_2@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/teacher_2@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/teacher_2@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/teacher_2.jpeg" alt="Фотография Денис Сергеев">
+                    <img class="teacher__foto" srcset="img/teacher_2.jpeg" alt="Фотография Денис Сергеев">
                   </picture>
                 </div>
                 <h3 class="teachers__info">Денис Сергеев</h3>
@@ -139,14 +140,14 @@
               </div>
             </li>
 
-            <li class="col-lg-3 col-md-6 col-sm-6 col-12 teachers__item">
+            <li class="col-lg-3 col-md-6 col-sm-6 teachers__item">
               <div class="teachers__item-content">
                 <div class="teachers__img">
                   <picture>
                     <source srcset="img/teacher_3@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/teacher_3@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/teacher_3@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/teacher_3.jpeg" alt="Фотография Михаил Андреев">
+                    <img class="teacher__foto" srcset="img/teacher_3.jpeg" alt="Фотография Михаил Андреев">
                   </picture>
                 </div>
                 <h3 class="teachers__info">Михаил Андреев</h3>
@@ -154,14 +155,14 @@
               </div>
             </li>
 
-            <li class="col-lg-3 col-md-6 col-sm-6 col-12 teachers__item">
+            <li class="col-lg-3 col-md-6 col-sm-6 teachers__item">
               <div class="teachers__item-content">
                 <div class="teachers__img">
                   <picture>
                     <source srcset="img/teacher_4@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/teacher_4@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/teacher_4@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/teacher_4.jpeg" alt="Фотография Константин Дмитриев">
+                    <img class="teacher__foto" srcset="img/teacher_4.jpeg" alt="Фотография Константин Дмитриев">
                   </picture>
                 </div>
                 <h3 class="teachers__info">Константин Дмитриев</h3>
@@ -172,18 +173,18 @@
         </div>
       </section>
 
-      <section class="courses" id="courses">
+     <section class="courses" id="courses">
         <div class="container">
           <h2 class="courses__title">Курсы</h2>
           <ul class="list-reset courses__list row">
-            <li class="col-lg-6 col-md-6 col-sm-6 col-12 courses__item">
+            <li class="col-lg-6 col-md-6 col-sm-6 courses__item">
               <div class="courses__item-content">
                 <div class="courses__img">
                   <picture>
                     <source srcset="img/course_1@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/course_1@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/course_1@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/course_1.jpeg" alt="Картинка к курсу Cinema 4d">
+                    <img class="course__picture" srcset="img/course_1.jpeg" alt="Картинка к курсу Cinema 4d">
                   </picture>
                   <span class="courses__hour">
                     <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,20 +204,20 @@
 
                 <div class="courses__detail">
                   <h3 class="courses__name">Cinema 4d&nbsp;для начинающих</h3>
-                  <p class="courses__descr">Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от&nbsp;системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от&nbsp;стандартных подходов.</p>
+                  <p class="courses__descr">Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных&nbsp;подходов.</p>
                   <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
                 </div>
               </div>
             </li>
 
-            <li class="col-lg-6 col-md-6 col-sm-6 col-12 courses__item">
+            <li class="col-lg-6 col-md-6 col-sm-6 courses__item">
               <div class="courses__item-content">
                 <div class="courses__img">
                   <picture>
                     <source srcset="img/course_2@320.jpeg" media="(max-width: 320px)">
                     <source srcset="img/course_2@576.jpeg" media="(max-width: 576px)">
                     <source srcset="img/course_2@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/course_2.jpeg" alt="Картинка к курсу Blender">
+                    <img class="course__picture" srcset="img/course_2.jpeg" alt="Картинка к курсу Blender">
                   </picture>
                   <span class="courses__hour">
                     <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,78 +236,78 @@
                 </div>
 
                 <div class="courses__detail">
-                  <h3 class="courses__name">Blender: продвинутый уровень</h3>
+                  <h3 class="courses__name">Blender:&nbsp;продвинутый уровень</h3>
                   <p class="courses__descr">Но&nbsp;убеждённость некоторых оппонентов в&nbsp;значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.</p>
                   <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
                 </div>
               </div>
-              </li>
-
-            <li class="col-lg-6 col-md-6 col-sm-6 col-12 courses__item">
-              <div class="courses__item-content">
-                <div class="courses__img">
-                  <picture>
-                    <source srcset="img/course_3@320.jpeg" media="(max-width: 320px)">
-                    <source srcset="img/course_3@576.jpeg" media="(max-width: 576px)">
-                    <source srcset="img/course_3@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/course_3.jpeg" alt="Картинка к курсу Визуализация 3ds Max">
-                  </picture>
-                  <span class="courses__hour">
-                    <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_51_38)">
-                      <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="white"/>
-                      <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="white"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_51_38">
-                      <rect width="24" height="24" fill="white"/>
-                      </clipPath>
-                      </defs>
-                      </svg>
-                    <span class="courses__text">40 часов</span>
-                  </span>
-                </div>
-
-                <div class="courses__detail">
-                  <h3 class="courses__name">Визуализация в&nbsp;3ds Max</h3>
-                  <p class="courses__descr">Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.</p>
-                  <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
-                </div>
-
-              </div>
             </li>
 
-            <li class="col-lg-6 col-md-6 col-sm-6 col-12 courses__item">
-              <div class="courses__item-content">
-                <div class="courses__img">
-                  <picture>
-                    <source srcset="img/course_4@320.jpeg" media="(max-width: 320px)">
-                    <source srcset="img/course_4@576.jpeg" media="(max-width: 576px)">
-                    <source srcset="img/course_4@768.jpeg" media="(max-width: 768px)">
-                    <img srcset="img/course_4.jpeg" alt="Картинка к курсу Скульптинг ZBrush">
-                  </picture>
-                  <span class="courses__hour">
-                    <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <g clip-path="url(#clip0_51_38)">
-                      <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="white"/>
-                      <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="white"/>
-                      </g>
-                      <defs>
-                      <clipPath id="clip0_51_38">
-                      <rect width="24" height="24" fill="white"/>
-                      </clipPath>
-                      </defs>
-                      </svg>
-                    <span class="courses__text">80 часов</span>
-                  </span>
-                </div>
+            <li class="col-lg-6 col-md-6 col-sm-6 courses__item">
+                  <div class="courses__item-content">
+                    <div class="courses__img">
+                      <picture>
+                        <source srcset="img/course_3@320.jpeg" media="(max-width: 320px)">
+                        <source srcset="img/course_3@576.jpeg" media="(max-width: 576px)">
+                        <source srcset="img/course_3@768.jpeg" media="(max-width: 768px)">
+                        <img class="course__picture" class="course__origin" srcset="img/course_3.jpeg" alt="Картинка к курсу Визуализация 3ds Max">
+                      </picture>
+                      <span class="courses__hour">
+                        <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_51_38)">
+                          <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="white"/>
+                          <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="white"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_51_38">
+                          <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                        <span class="courses__text">40 часов</span>
+                      </span>
+                    </div>
 
-                <div class="courses__detail">
-                  <h3 class="courses__name">Скульптинг в&nbsp;ZBrush</h3>
-                  <p class="courses__descr">Разнообразный и&nbsp;богатый опыт говорит нам, что граница обучения кадров требует определения и&nbsp;уточнения прогресса профессионального сообщества! В&nbsp;частности, постоянный количественный рост и&nbsp;сфера нашей активности.</p>
-                  <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
-                </div>
-              </div>
+                    <div class="courses__detail">
+                      <h3 class="courses__name">Визуализация в 3ds&nbsp;Max</h3>
+                      <p class="courses__descr">Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.</p>
+                      <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
+                    </div>
+
+                  </div>
+            </li>
+
+            <li class="col-lg-6 col-md-6 col-sm-6 courses__item">
+                  <div class="courses__item-content">
+                    <div class="courses__img">
+                      <picture>
+                        <source srcset="img/course_4@320.jpeg" media="(max-width: 320px)">
+                        <source srcset="img/course_4@576.jpeg" media="(max-width: 576px)">
+                        <source srcset="img/course_4@768.jpeg" media="(max-width: 768px)">
+                        <img class="course__picture" srcset="img/course_4.jpeg" alt="Картинка к курсу Скульптинг ZBrush">
+                      </picture>
+                      <span class="courses__hour">
+                        <svg class="coueses__svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_51_38)">
+                          <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="white"/>
+                          <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="white"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_51_38">
+                          <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                        <span class="courses__text">80 часов</span>
+                      </span>
+                    </div>
+
+                    <div class="courses__detail">
+                      <h3 class="courses__name">Скульптинг в&nbsp;ZBrush</h3>
+                      <p class="courses__descr">Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.</p>
+                      <a class="btn-reset btn courses__btn" href="#" target="_blank" aria-label="Кнопка подробнее">Подробнее</a>
+                    </div>
+                  </div>
             </li>
           </ul>
         </div>
@@ -357,7 +358,7 @@
 
 
         <div class="footer__descr">
-          <p class="footer__text">SKILLBOX <span class="footer__span">®</span>2021</p>
+          <p class="footer__text">SKILLBOX <span class="footer__span">® </span>2021</p>
         </div>
       </footer>
     </main>
