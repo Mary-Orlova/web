@@ -2,12 +2,7 @@
   background: radial-gradient(44.07% 44.07% at 67.78% 55.93%, #555681 0%, #212133 100%);
 }
 
-.hero__content {
-  justify-content: center;
-}
-
 .hero__left {
-  width: 459px;
   padding-top: 130px;
 }
 
@@ -35,7 +30,6 @@
 
 .hero__picture {
   position: relative;
-  justify-content: center;
 }
 
 .hero__img {
@@ -43,7 +37,7 @@
   top: 15px;
   right: 0;
   bottom: 0;
-  left: 110px;
+  left: 92px;
   margin-bottom: 8px;
 }
 
@@ -52,7 +46,7 @@
   top: 44px;
   right: 0;
   bottom: 0;
-  left: 15px;
+  left: 1px;
 }
 
 .hero__btn {

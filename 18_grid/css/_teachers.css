@@ -13,31 +13,12 @@
 }
 
 .teachers__cards {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   padding-bottom: 76px;
 }
 
-.teachers__item {
-  display: flex;
-  overflow: hidden;
-  flex-direction: column;
-  max-width: 254px;
-  margin-right: 30px;
-  padding: 0;
-  border-radius: 20px 20px 0 0;
-  text-align: center left;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.teachers__item:last-child {
-  margin-right: 0;
-}
-
 .teachers__item-content {
-  min-width: 255px;
+  overflow: hidden;
+  border-radius: 22px 22px 0 0;
 }
 
 .teachers__img {

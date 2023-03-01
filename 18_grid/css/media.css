@@ -10,36 +10,22 @@
     margin-right: 126px;
   }
 
-  .hero__picture {
-    margin: 0;
-    padding: 0;
-    padding-left: 10px;
-  }
-
   .hero__img {
     top: 20px;
     left: 15px;
   }
 
-  .hero__img-cube {
-    min-width: 118px;
-  }
-
-  .teachers__item {
-    min-height: 334px;
+  .teachers__item-content {
     margin-bottom: 30px;
+    border-radius: 35px 35px 0 0;
   }
 
-  .teachers__item:last-child {
-    margin-bottom: 0;
+  .teachers__cards {
+    padding-bottom: 36px;
   }
 
-  .teacher__foto {
-    max-width: 330px;
-  }
-
-  .courses__list {
-    justify-content: start;
+.teacher__foto, .course__picture {
+    width: 100%;
   }
 
   .courses__hour {
@@ -47,7 +33,7 @@
   }
 
   .courses__item-content {
-    min-width: 330px;
+    min-height: 556px;
   }
 }
 
@@ -58,23 +44,12 @@
     line-height: 50px;
   }
 
-  .hero__text {
-    min-width: 345px;
-    margin-bottom: 62px;
-  }
-
   .hero__left {
-    min-width: 385px;
     margin-bottom: 135px;
   }
 
-  .hero__picture {
-    top: 80px;
-    max-width: 470px;
-  }
-
-  .hero__img-cube {
-    max-width: 178px;
+  .hero__text {
+    margin-bottom: 62px;
   }
 
   .hero__btn {
@@ -82,23 +57,12 @@
     padding: 24px 76px;
   }
 
-  .card {
-    flex-direction: column;
-  }
-
-  .card::before {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-    padding: 0;
+  .advantages__box {
+    display: flex;
   }
 
   .courses__item-content {
     min-height: 556px;
-  }
-
-  .course__picture {
-    height: 180px;
   }
 
   .courses__btn {
@@ -106,38 +70,16 @@
   }
 }
 
-@media (max-width: 902px) {
-  .hero__picture {
-    top: 0;
-    max-width: 330px;
-  }
-
-  .hero__img {
-    top: 20%;
-  }
-
-  .hero__img-cube {
-    top: 110px;
-    left: 0;
+@media (max-width: 930px) {
+ .hero__img {
+    top: 90px;
   }
 
   .advantages__picture {
     min-width: 211px;
     min-height: 187px;
-    margin-right: 24px;
   }
 
-  .advantages__more {
-    max-width: 450px;
-  }
-
-  .teachers__item {
-    margin-bottom: 19px;
-  }
-
-  .teachers__item:nth-child(2n) {
-    margin-right: 0;
-  }
 }
 
 @media (max-width: 800px) {
@@ -147,12 +89,13 @@
 
   .hero__img {
     top: 116px;
-    left: 7px;
+    left: 20px;
   }
+
 
   .hero__img-cube {
     top: 118px;
-    left: -6px;
+    left: 66px;
     max-width: 130px;
   }
 
@@ -160,33 +103,29 @@
     margin-bottom: 75px;
   }
 
+  .advantages__box {
+    margin-bottom: 0;
+    justify-content: top;
+  }
+
   .advantages__descr {
     padding-top: 5px;
+  }
+
+  .card {
+    flex-direction: column;
+  }
+
+  .card::before {
+    margin-bottom: 15px;
   }
 
   .teachers__cards {
     padding-bottom: 40px;
   }
 
-  .teachers__item {
-    min-width: 330px;
-  }
-
-  .teacher__foto {
-    min-width: 100%;
-  }
-
   .courses__title {
     margin-bottom: 22px;
-  }
-
-  .courses__item {
-    max-width: 330px;
-    margin-right: 30px;
-  }
-
-  .courses__item:nth-child(2n) {
-    margin-right: 0;
   }
 
   .courses__btn {
@@ -203,7 +142,6 @@
 
   .header__container {
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 133px;
@@ -230,15 +168,9 @@
     margin-bottom: 56px;
   }
 
-  .advantages__box {
-    display: flex;
-  }
-
   .advantages__picture {
     min-width: 150px;
-    max-height: 304px;
-    margin-right: 30px;
-    padding-bottom: 170px;
+    height: 130px;
   }
 
   .advantages__title {
@@ -247,12 +179,6 @@
 
   .advantages__descr {
     margin-bottom: 26px;
-    padding-top: 0;
-  }
-
-  .advantages__more {
-    display: inline-block;
-    max-width: 330px;
   }
 
   .teachers__title {
@@ -263,41 +189,16 @@
     padding-bottom: 66px;
   }
 
-  .teachers__item {
-    min-width: 0;
-    max-width: 240px;
-    margin-right: 30px;
-    margin-bottom: 25;
-  }
-
-  .teachers__item-content {
-    min-width: 240px;
-  }
-
-  .teacher__foto {
-    width: 100%;
-  }
-
   .courses__title {
     margin-bottom: 25px;
   }
 
-  .courses__item {
-    max-width: 240px;
-    margin-right: 30px;
-  }
-
   .courses__item-content {
-    min-width: 240px;
     min-height: 653px;
   }
 
   .courses__detail {
     min-height: 195px;
-  }
-
-  .courses__hour {
-    left: 55%;
   }
 
   .courses__btn {
@@ -315,7 +216,7 @@
   .container {
     padding-right: 15px;
     padding-left: 15px;
-    /* min-width: 290px; */
+    min-width: 290px;
   }
 
   .header__container {
@@ -328,7 +229,6 @@
   .header__logo {
     margin: 0;
     margin-right: 137px;
-    margin-right: 56%;
   }
 
   .header__menu-wrap {
@@ -385,10 +285,8 @@
   }
 
   .hero__left {
-    min-width: 290px;
     margin-bottom: 50px;
     padding-top: 50px;
-    padding-bottom: 0;
   }
 
   .hero__title {
@@ -398,7 +296,6 @@
   }
 
   .hero__text {
-    min-width: 290px;
     margin-bottom: 19px;
     font-size: 16px;
     line-height: 21px;
@@ -415,7 +312,6 @@
   }
 
   .advantages__box {
-    min-width: 290px;
     padding-top: 50px;
   }
 
@@ -423,13 +319,8 @@
     display: none;
   }
 
-  .advantages__more {
-    max-width: max-content;
-  }
-
   .advantages__title {
     margin-bottom: 0;
-    padding-top: 5px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -444,16 +335,6 @@
 
   .card {
     flex-direction: row;
-    max-width: 540px;
-    margin-bottom: 22px;
-  }
-
-  .card:last-child {
-    margin-bottom: 0;
-  }
-
-  .teachers {
-    margin-bottom: 0;
   }
 
   .teachers__title {
@@ -467,40 +348,10 @@
     padding-bottom: 46px;
   }
 
-  .teachers__item {
-    min-width: 290px;
-    margin-right: 0;
-    margin-bottom: 30px;
-  }
-
-  .teacher__foto {
-    max-width: 290px;
-  }
-
-  .teachers__item:nth-child(2n) {
-    margin-bottom: 0;
-  }
-
   .courses__title {
     padding-top: 47px;
     font-size: 20px;
     line-height: 20px;
-  }
-
-  .courses__item {
-    max-width: 290px;
-    margin-right: 0;
-    margin-bottom: 30px;
-    padding: 0;
-  }
-
-  .courses__item:last-child {
-    margin-bottom: 0;
-  }
-
-  .courses__item-content {
-    min-width: 290px;
-    margin-bottom: 0;
   }
 
   .courses__btn {

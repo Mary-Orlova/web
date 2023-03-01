@@ -3,18 +3,13 @@
 }
 
 .advantages__box {
-  display: inline-block;
+  display: flex;
   padding-top: 80px;
+  margin-bottom: 30px;
 }
 
 .advantages__picture {
   margin-right: 30px;
-  padding-bottom: 15px;
-}
-
-.advantages__more {
-  display: inline-block;
-  max-width: 585px;
 }
 
 .advantages__title {
@@ -27,7 +22,6 @@
 
 .advantages__descr {
   margin: 0;
-  margin-bottom: 30px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
